@@ -12,6 +12,7 @@ namespace heDeno
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            webform.Text = Environment.GetEnvironmentVariable("webform").ToString();
         }
     }
 }
