@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,7 +14,21 @@ namespace heDeno
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            webform.Text = Environment.GetEnvironmentVariable("webform").ToString();
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            string sqlstmt = "Select * from Patient";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+
+            DataRow row = ds.Tables[0].Rows[0];
+
+            string id = row["lastName"].ToString();
+
+            webform.Text = id;
         }
     }
 }
