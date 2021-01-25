@@ -1,4 +1,5 @@
-﻿using System;
+﻿using heDenoDB.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -27,5 +28,27 @@ namespace heDenoDB
             }
             return composite;
         }
+
+        public List<Appointment> GetAppointmentsByPatientId(int patientId)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.SelectByPatientId(patientId);
+        }
+        public int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId)
+        {
+            Appointment appointment = new Appointment(startDateTime, endDateTime, doctorId, patientId);
+            return appointment.Insert();
+        }
+        public int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.Update(id, startDateTime, endDateTime, doctorId, patientId);
+        }
+        public Appointment GetOneAppointment(int id)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.SelectOneAppointment(id);
+        }
+
     }
 }

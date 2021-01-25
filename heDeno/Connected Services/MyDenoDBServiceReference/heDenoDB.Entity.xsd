@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Appointment" nillable="true" type="tns:Appointment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppointment" nillable="true" type="tns:ArrayOfAppointment" />
+  <xs:complexType name="Appointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clinicId" type="xs:int" />
+      <xs:element minOccurs="0" name="clinicName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clinicType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctorId" type="xs:int" />
+      <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientId" type="xs:int" />
+      <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Appointment" nillable="true" type="tns:Appointment" />
+</xs:schema>

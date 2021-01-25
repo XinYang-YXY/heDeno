@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "heDeno", "heDeno\heDeno.csproj", "{8922058E-57C2-48F9-B02F-01D19ABAF613}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1DC8D0BF-40EA-4C0E-A4CA-EA63757E60F8} = {1DC8D0BF-40EA-4C0E-A4CA-EA63757E60F8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "heDenoDB", "heDenoDB\heDenoDB.csproj", "{1DC8D0BF-40EA-4C0E-A4CA-EA63757E60F8}"
 EndProject

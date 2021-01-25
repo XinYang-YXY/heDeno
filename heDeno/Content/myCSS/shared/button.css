@@ -1,0 +1,28 @@
+﻿
+.btn-standard-width{
+    width:260px;
+}
+
+.standard-btn {
+    background-color:rgba(0, 0, 0, 0);
+    color: #5c73f2;
+    border: 2px solid #5c73F2;
+    outline:none;
+    padding-top:6px;
+    padding-bottom: 6px;
+}
+    .standard-btn:hover {
+        background-color: #5c73f2;
+        color: white;
+        transition: all 0.5s ease-in-out;
+    }
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.y-gap{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
