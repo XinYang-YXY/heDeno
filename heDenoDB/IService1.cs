@@ -1,4 +1,5 @@
-﻿using System;
+﻿using heDenoDB.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -18,6 +19,15 @@ namespace heDenoDB
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+        [OperationContract]
+        List <Appointment> GetAppointmentsByPatientId(int id);
+        [OperationContract]
+        int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        [OperationContract]
+        int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        [OperationContract]
+        Appointment GetOneAppointment(int id);
+
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

@@ -1,0 +1,83 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.montserrat {
+    font-family: 'Montserrat';
+}
+.sans-serif{
+    font-family: sans-serif;
+}
+.logo-size{
+    font-size: 1.5em;
+}
+
+.font-size-13{
+    font-size:1.3em;
+   
+}
+
+.grey-blue {
+    color: #829FD9 !important;
+}
+.grey-blue-second{
+    color: #5c73F2 !important;
+}
+.medium-font{
+    font-weight: 500;
+}
+.bold-font{
+    font-weight: 900;
+}
+
+.logo-opacity{
+    opacity:0.8;
+}
+
+.logo-opacity:hover{
+    opacity:1;
+}
+
+.navigation-opacity{
+    opacity:0.65;
+}
+.navigation-opacity:hover{
+    opacity:1
+}
+
+.margin-t-16{
+    margin-top:16px;
+}
+
+
+.box-style {
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:30px;
+    padding-bottom:40px;
+    margin-left:auto;
+    margin-right:auto;
+
+    border-radius: 0.75rem;
+
+    width:100%;
+    
+}
+
+.box-mobile{
+    max-width:310px;
+}
+
+.box-desktop-600{
+    max-width:600px;
+}
+
+/*Appointment Page*/
+.box-desktop-900 {
+    max-width: 900px;
+}
+
+
+
+.item-center{
+    text-align:center;
+}
