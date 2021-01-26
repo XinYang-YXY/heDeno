@@ -21,12 +21,24 @@ namespace heDenoDB
         // TODO: Add your service operations here
         [OperationContract]
         List <Appointment> GetAppointmentsByPatientId(int id);
+
         [OperationContract]
         int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+
         [OperationContract]
         int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+
         [OperationContract]
         Appointment GetOneAppointment(int id);
+
+        [OperationContract]
+        List <Specialty> GetAllSpecialty();
+
+        [OperationContract]
+        List<Clinic> GetClinicBySpecialty(string specialty);
+
+        [OperationContract]
+        Clinic GetOneClinic(string clinic_name);
 
     }
 

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using heDeno.MyDenoDBServiceReference;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,26 +15,20 @@ namespace heDeno
         string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
         MySqlConnection myConn = null;
         
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");
-            
+            select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");           
+
             if (!IsPostBack)
             {
                 try
                 {
-                    myConn = new MySqlConnection(DBConnect);
+                    List<Specialty> specialtyList = new List<Specialty>();
+                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                    specialtyList = client.GetAllSpecialty().ToList<Specialty>();
 
-                    string sqlstmt = "SELECT * FROM specialty";
-                    MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
-
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    //Custom text in dropdownlist
-                    dt.Columns.Add("specialtyFull", typeof(String), "specialtyName + ' (' + specialtyDesc + ')'");
-
-                    select_specialty.DataSource = dt;
+                    select_specialty.DataSource = specialtyList;
                     select_specialty.DataTextField = "specialtyFull";
                     select_specialty.DataValueField = "specialtyName";
                     select_specialty.DataBind();
@@ -45,14 +40,8 @@ namespace heDeno
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    myConn.Close();
-                }
-                
-            }
-        
+                }                
+            }       
         }
 
         protected void select_specialty_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,18 +50,11 @@ namespace heDeno
 
             try
             {
-                myConn = new MySqlConnection(DBConnect);
-                string sqlstmt = string.Format("SELECT * FROM clinic WHERE clinicType = @specialty_name");
-                MySqlCommand command = new MySqlCommand(sqlstmt, myConn);
-                command.CommandType = CommandType.Text;
-                command.Parameters.AddWithValue("@specialty_name", selected_specialty);
+                List<Clinic> clinicList = new List<Clinic>();
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                clinicList = client.GetClinicBySpecialty(selected_specialty).ToList<Clinic>();
 
-                MySqlDataAdapter da = new MySqlDataAdapter();
-                da.SelectCommand = command;
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                select_clinic.DataSource = ds;
+                select_clinic.DataSource = clinicList;
                 select_clinic.DataTextField = "clinicName";
                 select_clinic.DataValueField = "clinicName";
                 select_clinic.DataBind();
@@ -82,10 +64,6 @@ namespace heDeno
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                myConn.Close();
             }
            
         }
@@ -129,29 +107,15 @@ namespace heDeno
 
             try
             {
-                myConn = new MySqlConnection(DBConnect);
-                string sqlstmt = string.Format("SELECT * FROM clinic WHERE clinicName = @clinic_name");
-                MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
-                da.SelectCommand.Parameters.AddWithValue("@clinic_name", selected_clinic);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-
-                int rec_cnt = ds.Tables[0].Rows.Count;
-                if (rec_cnt == 1)
-                {
-                    DataRow row = ds.Tables[0].Rows[0];
-                    select_start_time.Attributes["min"] = row["startTime"].ToString();
-                    select_start_time.Attributes["max"] = row["endTime"].ToString();
-                    select_end_time.Attributes["max"] = row["endTime"].ToString();
-                }
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                var clinic = client.GetOneClinic(selected_clinic);
+                select_start_time.Attributes["min"] = clinic.StartTime.ToString();
+                select_start_time.Attributes["max"] = clinic.EndTime.ToString();
+                select_end_time.Attributes["max"] = clinic.EndTime.ToString();
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                myConn.Close();
             }
         }
 
