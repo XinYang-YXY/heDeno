@@ -44,6 +44,24 @@
   <wsdl:message name="IService1_GetOneAppointment_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOneAppointmentResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetAllSpecialty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpecialty" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllSpecialty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSpecialtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClinicBySpecialty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicBySpecialty" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClinicBySpecialty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClinicBySpecialtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOneClinic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneClinic" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOneClinic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneClinicResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -68,6 +86,18 @@
     <wsdl:operation name="GetOneAppointment">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOneAppointment" message="tns:IService1_GetOneAppointment_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOneAppointmentResponse" message="tns:IService1_GetOneAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpecialty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllSpecialty" message="tns:IService1_GetAllSpecialty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllSpecialtyResponse" message="tns:IService1_GetAllSpecialty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicBySpecialty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClinicBySpecialty" message="tns:IService1_GetClinicBySpecialty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClinicBySpecialtyResponse" message="tns:IService1_GetClinicBySpecialty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneClinic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOneClinic" message="tns:IService1_GetOneClinic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOneClinicResponse" message="tns:IService1_GetOneClinic_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -119,6 +149,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetOneAppointment">
       <soap:operation soapAction="http://tempuri.org/IService1/GetOneAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSpecialty">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllSpecialty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClinicBySpecialty">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetClinicBySpecialty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneClinic">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOneClinic" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -93,4 +93,44 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllSpecialty">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSpecialtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetAllSpecialtyResult" nillable="true" type="q5:ArrayOfSpecialty" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicBySpecialty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="specialty" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClinicBySpecialtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetClinicBySpecialtyResult" nillable="true" type="q6:ArrayOfClinic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneClinic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinic_name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneClinicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetOneClinicResult" nillable="true" type="q7:Clinic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

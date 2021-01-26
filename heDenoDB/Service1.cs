@@ -49,6 +49,20 @@ namespace heDenoDB
             Appointment appointment = new Appointment();
             return appointment.SelectOneAppointment(id);
         }
-
+        public List<Specialty> GetAllSpecialty()
+        {
+            Specialty specialty = new Specialty();
+            return specialty.SelectAllSpecialty();
+        }
+        public List<Clinic> GetClinicBySpecialty(string specialty)
+        {
+            Clinic clinic = new Clinic();
+            return clinic.SelectBySpecialty(specialty);
+        }
+        public Clinic GetOneClinic(string clinic_name)
+        {
+            Clinic clinic = new Clinic();
+            return clinic.SelectByName(clinic_name);
+        }
     }
 }
