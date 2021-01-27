@@ -17,6 +17,7 @@ namespace heDeno
             List<Appointment> appList = new List<Appointment>();
 
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+            //Patient id is 1 for now.
             appList = client.GetAppointmentsByPatientId(1).ToList<Appointment>();
 
             appointment_repeater.Visible = true;

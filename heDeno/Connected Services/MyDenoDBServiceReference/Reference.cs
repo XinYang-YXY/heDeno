@@ -497,6 +497,211 @@ namespace heDeno.MyDenoDBServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Doctor", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity")]
+    [System.SerializableAttribute()]
+    public partial class Doctor : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int clientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime dobField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string doctorFullField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string firstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string genderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string lastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string passwordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string phoneNumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string signatureField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int clientId {
+            get {
+                return this.clientIdField;
+            }
+            set {
+                if ((this.clientIdField.Equals(value) != true)) {
+                    this.clientIdField = value;
+                    this.RaisePropertyChanged("clientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime dob {
+            get {
+                return this.dobField;
+            }
+            set {
+                if ((this.dobField.Equals(value) != true)) {
+                    this.dobField = value;
+                    this.RaisePropertyChanged("dob");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string doctorFull {
+            get {
+                return this.doctorFullField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.doctorFullField, value) != true)) {
+                    this.doctorFullField = value;
+                    this.RaisePropertyChanged("doctorFull");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
+                    this.firstNameField = value;
+                    this.RaisePropertyChanged("firstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.genderField, value) != true)) {
+                    this.genderField = value;
+                    this.RaisePropertyChanged("gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
+                    this.lastNameField = value;
+                    this.RaisePropertyChanged("lastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
+                    this.passwordField = value;
+                    this.RaisePropertyChanged("password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phoneNum {
+            get {
+                return this.phoneNumField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.phoneNumField, value) != true)) {
+                    this.phoneNumField = value;
+                    this.RaisePropertyChanged("phoneNum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.signatureField, value) != true)) {
+                    this.signatureField = value;
+                    this.RaisePropertyChanged("signature");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDenoDBServiceReference.IService1")]
     public interface IService1 {
@@ -554,6 +759,12 @@ namespace heDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneClinic", ReplyAction="http://tempuri.org/IService1/GetOneClinicResponse")]
         System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic> GetOneClinicAsync(string clinic_name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDoctorByClinic", ReplyAction="http://tempuri.org/IService1/GetDoctorByClinicResponse")]
+        heDeno.MyDenoDBServiceReference.Doctor[] GetDoctorByClinic(string clinic_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDoctorByClinic", ReplyAction="http://tempuri.org/IService1/GetDoctorByClinicResponse")]
+        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Doctor[]> GetDoctorByClinicAsync(string clinic_id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -653,6 +864,14 @@ namespace heDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic> GetOneClinicAsync(string clinic_name) {
             return base.Channel.GetOneClinicAsync(clinic_name);
+        }
+        
+        public heDeno.MyDenoDBServiceReference.Doctor[] GetDoctorByClinic(string clinic_id) {
+            return base.Channel.GetDoctorByClinic(clinic_id);
+        }
+        
+        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Doctor[]> GetDoctorByClinicAsync(string clinic_id) {
+            return base.Channel.GetDoctorByClinicAsync(clinic_id);
         }
     }
 }

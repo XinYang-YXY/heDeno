@@ -158,6 +158,9 @@
     <Content Include="Connected Services\MyDenoDBServiceReference\heDeno.MyDenoDBServiceReference.Clinic.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MyDenoDBServiceReference\heDeno.MyDenoDBServiceReference.Doctor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\MyDenoDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

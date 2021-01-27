@@ -16,7 +16,7 @@ namespace heDeno
 
         protected void btn_backHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("ViewAppointment.aspx");
         }
     }
 }

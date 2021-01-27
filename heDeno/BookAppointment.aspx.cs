@@ -11,10 +11,7 @@ using System.Web.UI.WebControls;
 namespace heDeno
 {
     public partial class BookAppointment : System.Web.UI.Page
-    {
-        string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
-        MySqlConnection myConn = null;
-        
+    {   
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,7 +53,7 @@ namespace heDeno
 
                 select_clinic.DataSource = clinicList;
                 select_clinic.DataTextField = "clinicName";
-                select_clinic.DataValueField = "clinicName";
+                select_clinic.DataValueField = "id";
                 select_clinic.DataBind();
 
                 select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
@@ -74,21 +71,11 @@ namespace heDeno
 
             try
             {
-                myConn = new MySqlConnection(DBConnect);
-                string sqlstmt = string.Format("SELECT * FROM doctor INNER JOIN clinic ON doctor.clientId = clinic.id WHERE clinic.clinicName = @clinic_name");
-                MySqlCommand command = new MySqlCommand(sqlstmt, myConn);
-                command.CommandType = CommandType.Text;
-                command.Parameters.AddWithValue("@clinic_name", selected_clinic);
+                List<Doctor> doctorList = new List<Doctor>();
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                doctorList = client.GetDoctorByClinic(selected_clinic).ToList<Doctor>();
 
-                MySqlDataAdapter da = new MySqlDataAdapter();
-                da.SelectCommand = command;
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                //Custom text in dropdownlist
-                dt.Columns.Add("doctorFull", typeof(String), "firstName + ' ' + lastName");
-                
-                select_doctor.DataSource = dt;
+                select_doctor.DataSource = doctorList;
                 select_doctor.DataTextField = "doctorFull";
                 select_doctor.DataValueField = "id";
                 select_doctor.DataBind();
@@ -100,15 +87,11 @@ namespace heDeno
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
-            finally
-            {
-                myConn.Close();
-            }
 
             try
             {
                 MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                var clinic = client.GetOneClinic(selected_clinic);
+                var clinic = client.GetOneClinic(select_clinic.SelectedItem.Text);
                 select_start_time.Attributes["min"] = clinic.StartTime.ToString();
                 select_start_time.Attributes["max"] = clinic.EndTime.ToString();
                 select_end_time.Attributes["max"] = clinic.EndTime.ToString();
@@ -134,7 +117,7 @@ namespace heDeno
             } else
             {
                 MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-
+                //Patient id is 1 for now.
                 int result = client.CreateAppointment(startDateTime, endDateTime, int.Parse(select_doctor.SelectedValue), 1);
 
                 if (result == 1)
