@@ -12,8 +12,8 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <webopt:bundlereference runat="server" path="~/Content/css" />
     <link rel="stylesheet" href="~/Content/myCSS/shared/shared.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/icon.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/position.css">
@@ -43,7 +43,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="container body-content">
+        <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
