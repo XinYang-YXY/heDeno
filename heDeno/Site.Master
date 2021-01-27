@@ -13,7 +13,7 @@
     </asp:PlaceHolder>
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link rel="stylesheet" href="~/Content/myCSS/shared/shared.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/icon.css">
     <link rel="stylesheet" href="~/Content/myCSS/shared/position.css">
