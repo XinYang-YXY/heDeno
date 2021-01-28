@@ -55,4 +55,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Clinic" nillable="true" type="tns:Clinic" />
+  <xs:complexType name="ArrayOfDoctor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Doctor" nillable="true" type="tns:Doctor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctor" nillable="true" type="tns:ArrayOfDoctor" />
+  <xs:complexType name="Doctor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="doctorFull" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Doctor" nillable="true" type="tns:Doctor" />
 </xs:schema>

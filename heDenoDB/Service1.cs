@@ -64,5 +64,10 @@ namespace heDenoDB
             Clinic clinic = new Clinic();
             return clinic.SelectByName(clinic_name);
         }
+        public List<Doctor> GetDoctorByClinic(string clinic_id)
+        {
+            Doctor doctor = new Doctor();
+            return doctor.SelectByClinic(clinic_id);
+        }
     }
 }

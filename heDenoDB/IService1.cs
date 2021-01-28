@@ -40,6 +40,9 @@ namespace heDenoDB
         [OperationContract]
         Clinic GetOneClinic(string clinic_name);
 
+        [OperationContract]
+        List<Doctor> GetDoctorByClinic(string clinic_id);
+
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

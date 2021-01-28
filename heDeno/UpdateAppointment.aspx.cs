@@ -16,8 +16,6 @@ namespace heDeno
         string clinicId, clinicType, doctorId;
         string startDateTime, endDateTime, date;
 
-        string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
-        MySqlConnection myConn = null;
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
@@ -100,21 +98,11 @@ namespace heDeno
 
                 try
                 {
-                    myConn = new MySqlConnection(DBConnect);
-                    string sqlstmt = string.Format("SELECT * FROM doctor INNER JOIN clinic ON doctor.clientId = clinic.id WHERE clinic.id = @clinic_id");
-                    MySqlCommand command = new MySqlCommand(sqlstmt, myConn);
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@clinic_id", selected_clinic);
+                    List<Doctor> doctorList = new List<Doctor>();
+                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                    doctorList = client.GetDoctorByClinic(selected_clinic).ToList<Doctor>();
 
-                    MySqlDataAdapter da = new MySqlDataAdapter();
-                    da.SelectCommand = command;
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    //Custom text in dropdownlist
-                    dt.Columns.Add("doctorFull", typeof(String), "firstName + ' ' + lastName");
-
-                    select_doctor.DataSource = dt;
+                    select_doctor.DataSource = doctorList;
                     select_doctor.DataTextField = "doctorFull";
                     select_doctor.DataValueField = "id";
                     select_doctor.DataBind();
@@ -126,10 +114,6 @@ namespace heDeno
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    myConn.Close();
                 }
 
                 select_date.Text = date;
@@ -167,20 +151,11 @@ namespace heDeno
 
             try
             {
-                myConn = new MySqlConnection(DBConnect);
-                string sqlstmt = string.Format("SELECT * FROM doctor INNER JOIN clinic ON doctor.clientId = clinic.id WHERE clinic.id = @clinic_id");
-                MySqlCommand command = new MySqlCommand(sqlstmt, myConn);
-                command.Parameters.AddWithValue("@clinic_id", selected_clinic);
+                List<Doctor> doctorList = new List<Doctor>();
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                doctorList = client.GetDoctorByClinic(selected_clinic).ToList<Doctor>();
 
-                MySqlDataAdapter da = new MySqlDataAdapter();
-                da.SelectCommand = command;
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                //Custom text in dropdownlist
-                dt.Columns.Add("doctorFull", typeof(String), "firstName + ' ' + lastName");
-
-                select_doctor.DataSource = dt;
+                select_doctor.DataSource = doctorList;
                 select_doctor.DataTextField = "doctorFull";
                 select_doctor.DataValueField = "id";
                 select_doctor.DataBind();
@@ -190,10 +165,6 @@ namespace heDeno
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                myConn.Close();
             }
 
             try
