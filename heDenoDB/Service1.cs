@@ -34,15 +34,15 @@ namespace heDenoDB
             Appointment appointment = new Appointment();
             return appointment.SelectByPatientId(patientId);
         }
-        public int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId)
+        public int CreateAppointment(DateTime startDateTime, int doctorId, int patientId)
         {
-            Appointment appointment = new Appointment(startDateTime, endDateTime, doctorId, patientId);
+            Appointment appointment = new Appointment(startDateTime, doctorId, patientId);
             return appointment.Insert();
         }
-        public int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId)
+        public int UpdateAppointment(int id, DateTime startDateTime, int doctorId, int patientId)
         {
             Appointment appointment = new Appointment();
-            return appointment.Update(id, startDateTime, endDateTime, doctorId, patientId);
+            return appointment.Update(id, startDateTime, doctorId, patientId);
         }
         public Appointment GetOneAppointment(int id)
         {

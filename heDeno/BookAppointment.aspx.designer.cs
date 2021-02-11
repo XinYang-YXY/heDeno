@@ -60,15 +60,6 @@ namespace heDeno
         protected global::System.Web.UI.WebControls.TextBox select_start_time;
 
         /// <summary>
-        /// select_end_time control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox select_end_time;
-
-        /// <summary>
         /// PatientName control.
         /// </summary>
         /// <remarks>

@@ -21,12 +21,10 @@ namespace heDeno
         {
             DateTime u_date = DateTime.ParseExact(select_date.Text, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
             var u_startTime = DateTime.ParseExact(select_start_time.Text, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            var u_endTime = DateTime.ParseExact(select_end_time.Text, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             DateTime u_startDateTime = new DateTime(u_date.Year, u_date.Month, u_date.Day, u_startTime.Hour, u_startTime.Minute, u_startTime.Second);
-            DateTime u_endDateTime = new DateTime(u_date.Year, u_date.Month, u_date.Day, u_endTime.Hour, u_endTime.Minute, u_endTime.Second);
 
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-            int update = client.UpdateAppointment(appointment_id, u_startDateTime, u_endDateTime, int.Parse(select_doctor.SelectedValue), 1);
+            int update = client.UpdateAppointment(appointment_id, u_startDateTime, int.Parse(select_doctor.SelectedValue), 1);
 
             if (update == 1)
             {
@@ -118,7 +116,6 @@ namespace heDeno
 
                 select_date.Text = date;
                 select_start_time.Text = startDateTime;
-                select_end_time.Text = endDateTime;
             }
         }
 
@@ -173,8 +170,6 @@ namespace heDeno
                 var clinic = client.GetOneClinic(select_clinic.SelectedItem.Text);
                 select_start_time.Attributes["min"] = clinic.StartTime.ToString();
                 select_start_time.Attributes["max"] = clinic.EndTime.ToString();
-                select_end_time.Attributes["max"] = clinic.EndTime.ToString();
-
             }
             catch (Exception ex)
             {
@@ -196,8 +191,6 @@ namespace heDeno
                     var a = appointmentObj.startDateTime;
                     date = a.ToString("yyyy-MM-dd");
                     startDateTime = a.ToString("HH:mm");
-                    var b = appointmentObj.endDateTime;
-                    endDateTime = b.ToString("HH:mm");
                 } else
                 {
                     lbl_msg.ForeColor = System.Drawing.Color.Red;

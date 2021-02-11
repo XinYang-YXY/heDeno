@@ -12,18 +12,24 @@
                                     <p>Clinic Name: <b><%#Eval("clinicName")%></b></p> 
                                     <p>Doctor: <b><%#Eval("firstName")%></b> <b><%#Eval("lastName")%></b></p>
                                     <p>Specialty: <b><%#Eval("clinicType")%></b></p>
-                                    <p>Appointment Time: <b><%#Eval("startDateTime")%></b><b> - </b><b><%#Eval("endDateTime")%></b></p>    
+                                    <p>Appointment Time: <b><%#Eval("startDateTime")%></b></p>    
                                     <asp:HiddenField runat="server" ID="hidden_id" Value='<%#Eval("id")%>' />
                                 </div>
                                 
                                 <div class="col-12 d-flex flex-row-reverse" style="margin-top:10px;">
                                     <asp:LinkButton runat="server" ID="linkbtn" CommandName="UpdateAppointment" CssClass="montserrat rounded-full standard-btn btn-standard-width y-gap item-center" Text="Change"/>                       
-\                                </div>
+                                </div>
                             </div>                    
                         </div>
                         
                     </div>
                 </ItemTemplate>
+                <FooterTemplate>
+                    <%if (appointment_repeater.Items.Count == 0)  
+                        { %>  
+                          <p class="montserrat grey-blue-second" style="margin-top:50px;">You have no upcoming appointments</p>
+                      <%} %>  
+                </FooterTemplate>
             </asp:Repeater>
         </div>
     </section>

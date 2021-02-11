@@ -25,10 +25,6 @@
                     <p class="montserrat grey-blue-second medium-font font-size-13">Preferred Start time</p>
                     <asp:Textbox ID="select_start_time" placeholder="Preferred Start Time" runat="server" TextMode="Time" CssClass="standard-inputField full-width-inputField" Text="Preferred Start Time" required/>
                 </div>
-                <div class="inputHeader-row inputHeader-row-appointment">
-                    <p class="montserrat grey-blue-second medium-font font-size-13">Preferred End Time</p>
-                    <asp:Textbox ID="select_end_time" placeholder="Preferred End Time" runat="server" TextMode="Time" CssClass="standard-inputField full-width-inputField" required/>
-                </div>
             </section>
 
             <!--

@@ -23,10 +23,10 @@ namespace heDenoDB
         List <Appointment> GetAppointmentsByPatientId(int id);
 
         [OperationContract]
-        int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        int CreateAppointment(DateTime startDateTime, int doctorId, int patientId);
 
         [OperationContract]
-        int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        int UpdateAppointment(int id, DateTime startDateTime, int doctorId, int patientId);
 
         [OperationContract]
         Appointment GetOneAppointment(int id);

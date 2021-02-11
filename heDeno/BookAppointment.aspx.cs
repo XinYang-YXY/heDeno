@@ -94,7 +94,6 @@ namespace heDeno
                 var clinic = client.GetOneClinic(select_clinic.SelectedItem.Text);
                 select_start_time.Attributes["min"] = clinic.StartTime.ToString();
                 select_start_time.Attributes["max"] = clinic.EndTime.ToString();
-                select_end_time.Attributes["max"] = clinic.EndTime.ToString();
             }
             catch (Exception ex)
             {
@@ -106,31 +105,21 @@ namespace heDeno
         {
             DateTime date = DateTime.ParseExact(select_date.Text, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
             var startTime = DateTime.ParseExact(select_start_time.Text, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            var endTime = DateTime.ParseExact(select_end_time.Text, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             DateTime startDateTime = new DateTime(date.Year, date.Month, date.Day, startTime.Hour, startTime.Minute, startTime.Second);
-            DateTime endDateTime = new DateTime(date.Year, date.Month, date.Day, endTime.Hour, endTime.Minute, endTime.Second);
 
-            if(startTime > endTime || endTime < startTime)
-            {
-                lbl_msg.ForeColor = System.Drawing.Color.Red;
-                lbl_msg.Text = "Time is not valid!";
-            } else
-            {
-                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                //Patient id is 1 for now.
-                int result = client.CreateAppointment(startDateTime, endDateTime, int.Parse(select_doctor.SelectedValue), 1);
+            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+            //Patient id is 1 for now.
+            int result = client.CreateAppointment(startDateTime, int.Parse(select_doctor.SelectedValue), 1);
 
-                if (result == 1)
-                {
-                    Response.Redirect("AppointmentSuccess");
-                }
-                else
-                {
-                    System.Diagnostics.Debug.WriteLine("Failed");
-                }
+            if (result == 1)
+            {
+                Response.Redirect("AppointmentSuccess");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Failed");
             }
 
-            
         }
     }
 }

@@ -96,9 +96,6 @@ namespace heDeno.MyDenoDBServiceReference {
         private int doctorIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime endDateTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string firstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -171,19 +168,6 @@ namespace heDeno.MyDenoDBServiceReference {
                 if ((this.doctorIdField.Equals(value) != true)) {
                     this.doctorIdField = value;
                     this.RaisePropertyChanged("doctorId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime endDateTime {
-            get {
-                return this.endDateTimeField;
-            }
-            set {
-                if ((this.endDateTimeField.Equals(value) != true)) {
-                    this.endDateTimeField = value;
-                    this.RaisePropertyChanged("endDateTime");
                 }
             }
         }
@@ -725,16 +709,16 @@ namespace heDeno.MyDenoDBServiceReference {
         System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentsByPatientIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAppointment", ReplyAction="http://tempuri.org/IService1/CreateAppointmentResponse")]
-        int CreateAppointment(System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
+        int CreateAppointment(System.DateTime startDateTime, int doctorId, int patientId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAppointment", ReplyAction="http://tempuri.org/IService1/CreateAppointmentResponse")]
-        System.Threading.Tasks.Task<int> CreateAppointmentAsync(System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
+        System.Threading.Tasks.Task<int> CreateAppointmentAsync(System.DateTime startDateTime, int doctorId, int patientId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateAppointment", ReplyAction="http://tempuri.org/IService1/UpdateAppointmentResponse")]
-        int UpdateAppointment(int id, System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
+        int UpdateAppointment(int id, System.DateTime startDateTime, int doctorId, int patientId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateAppointment", ReplyAction="http://tempuri.org/IService1/UpdateAppointmentResponse")]
-        System.Threading.Tasks.Task<int> UpdateAppointmentAsync(int id, System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
+        System.Threading.Tasks.Task<int> UpdateAppointmentAsync(int id, System.DateTime startDateTime, int doctorId, int patientId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneAppointment", ReplyAction="http://tempuri.org/IService1/GetOneAppointmentResponse")]
         heDeno.MyDenoDBServiceReference.Appointment GetOneAppointment(int id);
@@ -818,20 +802,20 @@ namespace heDeno.MyDenoDBServiceReference {
             return base.Channel.GetAppointmentsByPatientIdAsync(id);
         }
         
-        public int CreateAppointment(System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId) {
-            return base.Channel.CreateAppointment(startDateTime, endDateTime, doctorId, patientId);
+        public int CreateAppointment(System.DateTime startDateTime, int doctorId, int patientId) {
+            return base.Channel.CreateAppointment(startDateTime, doctorId, patientId);
         }
         
-        public System.Threading.Tasks.Task<int> CreateAppointmentAsync(System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId) {
-            return base.Channel.CreateAppointmentAsync(startDateTime, endDateTime, doctorId, patientId);
+        public System.Threading.Tasks.Task<int> CreateAppointmentAsync(System.DateTime startDateTime, int doctorId, int patientId) {
+            return base.Channel.CreateAppointmentAsync(startDateTime, doctorId, patientId);
         }
         
-        public int UpdateAppointment(int id, System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId) {
-            return base.Channel.UpdateAppointment(id, startDateTime, endDateTime, doctorId, patientId);
+        public int UpdateAppointment(int id, System.DateTime startDateTime, int doctorId, int patientId) {
+            return base.Channel.UpdateAppointment(id, startDateTime, doctorId, patientId);
         }
         
-        public System.Threading.Tasks.Task<int> UpdateAppointmentAsync(int id, System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId) {
-            return base.Channel.UpdateAppointmentAsync(id, startDateTime, endDateTime, doctorId, patientId);
+        public System.Threading.Tasks.Task<int> UpdateAppointmentAsync(int id, System.DateTime startDateTime, int doctorId, int patientId) {
+            return base.Channel.UpdateAppointmentAsync(id, startDateTime, doctorId, patientId);
         }
         
         public heDeno.MyDenoDBServiceReference.Appointment GetOneAppointment(int id) {
