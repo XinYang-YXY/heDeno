@@ -1,5 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewAppointment.aspx.cs" Inherits="heDeno.ViewAppointment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        .btn_cancel{
+            border: 2px solid #dc3545 !important;
+            color: #dc3545 !important;
+            margin-left: 5px;
+        }
+        .btn_cancel:hover{
+            color: white !important;
+            background-color: #dc3545 !important;
+        }
+    </style>
+
     <section class="vertical-middle-landing">
         <div class="box-style box-desktop-900 item-center">
             <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:20px;">Your Appointments</h2>
@@ -17,7 +29,8 @@
                                 </div>
                                 
                                 <div class="col-12 d-flex flex-row-reverse" style="margin-top:10px;">
-                                    <asp:LinkButton runat="server" ID="linkbtn" CommandName="UpdateAppointment" CssClass="montserrat rounded-full standard-btn btn-standard-width y-gap item-center" Text="Change"/>                       
+                                    <asp:LinkButton runat="server" ID="linkbtn_cancel" CommandName="CancelAppointment" CssClass="montserrat rounded-full standard-btn btn-standard-width y-gap item-center btn_cancel" Text="Cancel"/>   
+                                    <asp:LinkButton runat="server" ID="linkbtn_update" CommandName="UpdateAppointment" CssClass="montserrat rounded-full standard-btn btn-standard-width y-gap item-center" Text="Change"/>   
                                 </div>
                             </div>                    
                         </div>

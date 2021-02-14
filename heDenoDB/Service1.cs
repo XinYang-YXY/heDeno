@@ -74,5 +74,10 @@ namespace heDenoDB
             Appointment appointment = new Appointment();
             return appointment.SelectByDoctorIdAndDate(doctorId, date);
         }
+        public int CancelAppointment(int id)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.Delete(id);
+        }
     }
 }

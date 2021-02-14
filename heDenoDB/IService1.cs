@@ -45,6 +45,9 @@ namespace heDenoDB
 
         [OperationContract]
         List<Appointment> GetAllAppointmentsByDoctorAndDate(int doctorId, string date);
+
+        [OperationContract]
+        int CancelAppointment(int id);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

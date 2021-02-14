@@ -20,6 +20,7 @@
                 <a href="/"><button id="btn_back" class="montserrat rounded-full standard-btn btn-standard-width y-gap back_btn" type="button"> < Back</button></a>
             </div>           
             <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:35px;">Book Appointment</h2>
+
             <section class="layout-inputField input-section-gap">
                 <div class="inputHeader-row">
                     <p class="montserrat grey-blue-second bold-font font-size-13">Appointment Details</p>

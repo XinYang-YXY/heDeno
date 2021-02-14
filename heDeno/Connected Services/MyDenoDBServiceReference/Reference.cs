@@ -771,6 +771,12 @@ namespace heDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllAppointmentsByDoctorAndDate", ReplyAction="http://tempuri.org/IService1/GetAllAppointmentsByDoctorAndDateResponse")]
         System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment[]> GetAllAppointmentsByDoctorAndDateAsync(int doctorId, string date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CancelAppointment", ReplyAction="http://tempuri.org/IService1/CancelAppointmentResponse")]
+        int CancelAppointment(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CancelAppointment", ReplyAction="http://tempuri.org/IService1/CancelAppointmentResponse")]
+        System.Threading.Tasks.Task<int> CancelAppointmentAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -886,6 +892,14 @@ namespace heDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment[]> GetAllAppointmentsByDoctorAndDateAsync(int doctorId, string date) {
             return base.Channel.GetAllAppointmentsByDoctorAndDateAsync(doctorId, date);
+        }
+        
+        public int CancelAppointment(int id) {
+            return base.Channel.CancelAppointment(id);
+        }
+        
+        public System.Threading.Tasks.Task<int> CancelAppointmentAsync(int id) {
+            return base.Channel.CancelAppointmentAsync(id);
         }
     }
 }
