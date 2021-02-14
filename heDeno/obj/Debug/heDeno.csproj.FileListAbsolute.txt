@@ -177,11 +177,11 @@ C:\Users\livin\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.xml
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.pdb
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.dll
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.pdb
+<<<<<<< HEAD
 C:\Git Repos\heDeno\heDeno\bin\EntityFramework.xml
 C:\Git Repos\heDeno\heDeno\bin\heDeno.dll.config
 C:\Git Repos\heDeno\heDeno\bin\heDeno.dll
@@ -284,3 +284,6 @@ C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.WebHost.dll
 C:\Git Repos\heDeno\heDeno\bin\System.Net.Http.Formatting.xml
 C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.xml
 C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.WebHost.xml
+=======
+C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
+>>>>>>> develop

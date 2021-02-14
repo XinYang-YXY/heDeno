@@ -24,7 +24,6 @@ C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb
-C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs.cache
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb
@@ -50,6 +49,7 @@ C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.dll.config
 C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.dll
 C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.pdb
@@ -76,3 +76,6 @@ C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs.cache
 C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
 C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
 C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb
+=======
+C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
+>>>>>>> develop

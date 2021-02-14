@@ -68,6 +68,18 @@
   <wsdl:message name="IService1_GetDoctorByClinic_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDoctorByClinicResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetAllAppointmentsByDoctorAndDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppointmentsByDoctorAndDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllAppointmentsByDoctorAndDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppointmentsByDoctorAndDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CancelAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CancelAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelAppointmentResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_CreatePatient_InputMessage">
     <wsdl:part name="parameters" element="tns:CreatePatient" />
   </wsdl:message>
@@ -150,6 +162,14 @@
     <wsdl:operation name="GetDoctorByClinic">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoctorByClinic" message="tns:IService1_GetDoctorByClinic_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoctorByClinicResponse" message="tns:IService1_GetDoctorByClinic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAppointmentsByDoctorAndDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllAppointmentsByDoctorAndDate" message="tns:IService1_GetAllAppointmentsByDoctorAndDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllAppointmentsByDoctorAndDateResponse" message="tns:IService1_GetAllAppointmentsByDoctorAndDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CancelAppointment" message="tns:IService1_CancelAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CancelAppointmentResponse" message="tns:IService1_CancelAppointment_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreatePatient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreatePatient" message="tns:IService1_CreatePatient_InputMessage" />
@@ -265,6 +285,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetDoctorByClinic">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDoctorByClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAppointmentsByDoctorAndDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllAppointmentsByDoctorAndDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelAppointment">
+      <soap:operation soapAction="http://tempuri.org/IService1/CancelAppointment" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -23,10 +23,10 @@ namespace heDenoDB
         List <Appointment> GetAppointmentsByPatientId(int id);
 
         [OperationContract]
-        int CreateAppointment(DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        int CreateAppointment(string date, TimeSpan time, int doctorId, int patientId);
 
         [OperationContract]
-        int UpdateAppointment(int id, DateTime startDateTime, DateTime endDateTime, int doctorId, int patientId);
+        int UpdateAppointment(int id, string date, TimeSpan time, int doctorId, int patientId);
 
         [OperationContract]
         Appointment GetOneAppointment(int id);
@@ -43,6 +43,11 @@ namespace heDenoDB
         [OperationContract]
         List<Doctor> GetDoctorByClinic(string clinic_id);
 
+        [OperationContract]
+        List<Appointment> GetAllAppointmentsByDoctorAndDate(int doctorId, string date);
+
+        [OperationContract]
+        int CancelAppointment(int id);
         // Patient operation contract
         [OperationContract]
         int CreatePatient(Guid uuid, string email, string phoneNum, string firstName,

@@ -48,8 +48,8 @@
   <xs:element name="CreateAppointment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="time" type="q4:duration" />
         <xs:element minOccurs="0" name="doctorId" type="xs:int" />
         <xs:element minOccurs="0" name="patientId" type="xs:int" />
       </xs:sequence>
@@ -66,8 +66,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
-        <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="endDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="time" type="q5:duration" />
         <xs:element minOccurs="0" name="doctorId" type="xs:int" />
         <xs:element minOccurs="0" name="patientId" type="xs:int" />
       </xs:sequence>
@@ -90,7 +90,7 @@
   <xs:element name="GetOneAppointmentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetOneAppointmentResult" nillable="true" type="q4:Appointment" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetOneAppointmentResult" nillable="true" type="q6:Appointment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -102,7 +102,7 @@
   <xs:element name="GetAllSpecialtyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetAllSpecialtyResult" nillable="true" type="q5:ArrayOfSpecialty" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetAllSpecialtyResult" nillable="true" type="q7:ArrayOfSpecialty" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -116,7 +116,7 @@
   <xs:element name="GetClinicBySpecialtyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetClinicBySpecialtyResult" nillable="true" type="q6:ArrayOfClinic" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetClinicBySpecialtyResult" nillable="true" type="q8:ArrayOfClinic" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -130,7 +130,7 @@
   <xs:element name="GetOneClinicResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetOneClinicResult" nillable="true" type="q7:Clinic" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetOneClinicResult" nillable="true" type="q9:Clinic" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -144,7 +144,36 @@
   <xs:element name="GetDoctorByClinicResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetDoctorByClinicResult" nillable="true" type="q8:ArrayOfDoctor" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetDoctorByClinicResult" nillable="true" type="q10:ArrayOfDoctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppointmentsByDoctorAndDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorId" type="xs:int" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppointmentsByDoctorAndDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="GetAllAppointmentsByDoctorAndDateResult" nillable="true" type="q11:ArrayOfAppointment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelAppointment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelAppointmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelAppointmentResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

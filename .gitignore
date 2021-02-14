@@ -1,3 +1,11 @@
 App.config
 Web.config
 .vs/
+
+heDeno/obj/
+
+heDeno/bin/
+
+heDenoDB/obj/
+
+heDenoDB/bin/

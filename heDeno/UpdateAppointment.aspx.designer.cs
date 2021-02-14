@@ -51,22 +51,22 @@ namespace heDeno
         protected global::System.Web.UI.WebControls.TextBox select_date;
 
         /// <summary>
-        /// select_start_time control.
+        /// available_timeslots control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox select_start_time;
+        protected global::System.Web.UI.WebControls.RadioButtonList available_timeslots;
 
         /// <summary>
-        /// select_end_time control.
+        /// rfv1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox select_end_time;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv1;
 
         /// <summary>
         /// lbl_msg control.
