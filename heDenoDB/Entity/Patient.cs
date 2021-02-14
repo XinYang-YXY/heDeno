@@ -81,7 +81,7 @@ namespace heDenoDB.Entity
             if (rec_cnt == 1)
             {
                 DataRow row = ds.Tables[0].Rows[0];
-                string secretId = row["secretId"].ToString();
+                string secretId = row["id"].ToString();
                 string dataEmail = row["email"].ToString();
                 string phoneNum = row["phoneNum"].ToString();
                 string firstName = row["firstName"].ToString();
