@@ -12,7 +12,7 @@
                                     <p>Clinic Name: <b><%#Eval("clinicName")%></b></p> 
                                     <p>Doctor: <b><%#Eval("firstName")%></b> <b><%#Eval("lastName")%></b></p>
                                     <p>Specialty: <b><%#Eval("clinicType")%></b></p>
-                                    <p>Appointment Time: <b><%#Eval("startDateTime")%></b></p>    
+                                    <p>Appointment Time: <b><%#Eval("date")%></b> <b><%#Eval("time")%></b></p>    
                                     <asp:HiddenField runat="server" ID="hidden_id" Value='<%#Eval("id")%>' />
                                 </div>
                                 

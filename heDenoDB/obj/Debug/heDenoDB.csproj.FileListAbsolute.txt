@@ -24,7 +24,6 @@ C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
 C:\Users\yxy\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb
-C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs.cache
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb

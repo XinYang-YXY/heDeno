@@ -12,7 +12,8 @@ namespace heDenoDB.Entity
     public class Appointment
     {
         public int id { get; set; }
-        public DateTime startDateTime { get; set; }
+        public string date { get; set; }
+        public TimeSpan time { get; set; }
         public int doctorId { get; set; }
         public int patientId { get; set; }
 
@@ -27,30 +28,41 @@ namespace heDenoDB.Entity
 
         }
 
-        public Appointment(DateTime startDateTime, int doctorId, int patientId)
+        public Appointment(string date, TimeSpan time, int doctorId, int patientId)
         {
-            this.startDateTime = startDateTime;
+            this.date = date;
+            this.time = time;
             this.doctorId = doctorId;
             this.patientId = patientId;
         }
 
-        public Appointment(int id, DateTime startDateTime, string clinicName, string firstName, string lastName, string clinicType)
+        public Appointment(int id, string date, TimeSpan time, string clinicName, string firstName, string lastName, string clinicType)
         {
             this.id = id;
-            this.startDateTime = startDateTime;
+            this.date = date;
+            this.time = time;
             this.clinicName = clinicName;
             this.firstName = firstName;
             this.lastName = lastName;
             this.clinicType = clinicType;
         }
 
-        public Appointment(int id, DateTime startDateTime, int clinicId, int doctorId, string clinicType)
+        public Appointment(int id, string date, TimeSpan time, int clinicId, int doctorId, string clinicType)
         {
             this.id = id;
-            this.startDateTime = startDateTime;
+            this.date = date;
+            this.time = time;
             this.clinicId = clinicId;
             this.doctorId = doctorId;
             this.clinicType = clinicType;
+        }
+
+        public Appointment(int id, string date, TimeSpan time, int doctorId)
+        {
+            this.id = id;
+            this.date = date;
+            this.time = time;
+            this.doctorId = doctorId;
         }
 
         public List<Appointment> SelectByPatientId(int id)
@@ -78,13 +90,13 @@ namespace heDenoDB.Entity
             {
                 DataRow row = ds.Tables[0].Rows[i];
                 int appid = int.Parse(row["id"].ToString());
-                DateTime startDateTime = DateTime.Parse(row["startDateTime"].ToString());
+                string date = row["date"].ToString();
+                TimeSpan time = TimeSpan.Parse(row["time"].ToString());
                 string sclinicName = row["clinicName"].ToString();
                 string doctorFN = row["firstName"].ToString();
                 string doctorLN = row["lastName"].ToString();
                 string sclinicType = row["clinicType"].ToString();
-
-                Appointment obj = new Appointment(appid, startDateTime, sclinicName, doctorFN, doctorLN, sclinicType);
+                Appointment obj = new Appointment(appid, date, time, sclinicName, doctorFN, doctorLN, sclinicType);
                 appList.Add(obj);
             }
             return appList;
@@ -98,11 +110,12 @@ namespace heDenoDB.Entity
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
             // Step 2 - Create a SqlCommand object to add record with INSERT statement
-            string sqlStmt = "INSERT INTO appointment (startDateTime, doctorId, patientId) VALUES (@startDateTime, @doctorId, @patientId)";
+            string sqlStmt = "INSERT INTO appointment (date, time, doctorId, patientId) VALUES (@date, @time, @doctorId, @patientId)";
             MySqlCommand sqlCmd = new MySqlCommand(sqlStmt, myConn);
 
             // Step 3 : Add each parameterised variable with value
-            sqlCmd.Parameters.AddWithValue("@startDateTime", startDateTime);
+            sqlCmd.Parameters.AddWithValue("@date", date);
+            sqlCmd.Parameters.AddWithValue("@time", time);
             sqlCmd.Parameters.AddWithValue("@doctorId", doctorId);
             sqlCmd.Parameters.AddWithValue("@patientId", patientId);
 
@@ -115,15 +128,16 @@ namespace heDenoDB.Entity
             return result;
         }
 
-        public int Update(int id, DateTime startDateTime, int doctorId, int patientId)
+        public int Update(int id, string date, TimeSpan time, int doctorId, int patientId)
         {
             string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
-            string sqlStmt = "UPDATE appointment SET startDateTime = @startDateTime, doctorId = @doctorId, patientId = @patientId WHERE id = @id";
+            string sqlStmt = "UPDATE appointment SET date = @date, time = @time, doctorId = @doctorId, patientId = @patientId WHERE id = @id";
             MySqlCommand sqlCmd = new MySqlCommand(sqlStmt, myConn);
 
-            sqlCmd.Parameters.AddWithValue("@startDateTime", startDateTime);
+            sqlCmd.Parameters.AddWithValue("@date", date);
+            sqlCmd.Parameters.AddWithValue("@time", time);
             sqlCmd.Parameters.AddWithValue("@doctorId", doctorId);
             sqlCmd.Parameters.AddWithValue("@patientId", patientId);
             sqlCmd.Parameters.AddWithValue("@id", id);
@@ -161,13 +175,50 @@ namespace heDenoDB.Entity
             {
                 DataRow row = ds.Tables[0].Rows[0]; // Sql command returns only one record
                 int app_id = int.Parse(row["id"].ToString());
-                DateTime startDateTime = DateTime.Parse(row["startDateTime"].ToString());
+                string date = row["date"].ToString();
+                TimeSpan time = TimeSpan.Parse(row["time"].ToString());
                 int clinicId = int.Parse(row["clientId"].ToString());
                 int doctorId = int.Parse(row["doctorId"].ToString());
                 string sclinicType = row["clinicType"].ToString();
-                appointment = new Appointment(app_id, startDateTime, clinicId, doctorId, sclinicType);
+                appointment = new Appointment(app_id, date, time, clinicId, doctorId, sclinicType);
             }
             return appointment;
+        }
+
+        public List<Appointment> SelectByDoctorIdAndDate(int doctorId, string date)
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from web.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter to retrieve data from the database table
+            string sqlstmt = "Select * FROM appointment WHERE doctorId = @doctorId AND date = @date";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@doctorId", doctorId);
+            da.SelectCommand.Parameters.AddWithValue("@date", date);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to list.
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            List<Appointment> appList = new List<Appointment>();
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];
+                int appid = int.Parse(row["id"].ToString());
+                string app_date = row["date"].ToString();
+                TimeSpan time = TimeSpan.Parse(row["time"].ToString());
+                int docId = int.Parse(row["doctorId"].ToString());
+
+                Appointment obj = new Appointment(appid, app_date, time, docId);
+                appList.Add(obj);
+            }
+            return appList;
         }
 
     }

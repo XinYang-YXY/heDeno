@@ -34,15 +34,15 @@ namespace heDenoDB
             Appointment appointment = new Appointment();
             return appointment.SelectByPatientId(patientId);
         }
-        public int CreateAppointment(DateTime startDateTime, int doctorId, int patientId)
+        public int CreateAppointment(string date, TimeSpan time, int doctorId, int patientId)
         {
-            Appointment appointment = new Appointment(startDateTime, doctorId, patientId);
+            Appointment appointment = new Appointment(date, time, doctorId, patientId);
             return appointment.Insert();
         }
-        public int UpdateAppointment(int id, DateTime startDateTime, int doctorId, int patientId)
+        public int UpdateAppointment(int id, string date, TimeSpan time, int doctorId, int patientId)
         {
             Appointment appointment = new Appointment();
-            return appointment.Update(id, startDateTime, doctorId, patientId);
+            return appointment.Update(id, date, time, doctorId, patientId);
         }
         public Appointment GetOneAppointment(int id)
         {
@@ -68,6 +68,11 @@ namespace heDenoDB
         {
             Doctor doctor = new Doctor();
             return doctor.SelectByClinic(clinic_id);
+        }
+        public List<Appointment> GetAllAppointmentsByDoctorAndDate(int doctorId, string date)
+        {
+            Appointment appointment = new Appointment();
+            return appointment.SelectByDoctorIdAndDate(doctorId, date);
         }
     }
 }
