@@ -150,6 +150,24 @@ namespace heDenoDB.Entity
             return result;
         }
 
+        public int Delete(int id)
+        {
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            string sqlStmt = "DELETE FROM appointment WHERE id = @id";
+            MySqlCommand sqlCmd = new MySqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@id", id);
+
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+
+            myConn.Close();
+
+            return result;
+        }
+
         public Appointment SelectOneAppointment(int id)
         {
             //Step 1 -  Define a connection to the database by getting

@@ -5,11 +5,21 @@
             margin-right: 10px;
             padding: 6px;
         }
+        .back_btn{
+            width: 80px !important;
+        }
+        .back_btn-div{
+            text-align:left !important;
+            margin-left: 30px;
+        }
     </style>
 
     <section class="vertical-middle-landing">
         <div class="box-style box-desktop-900 item-center">
-            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:20px;">Book Appointment</h2>
+            <div class="back_btn-div">
+                <a href="/"><button id="btn_back" class="montserrat rounded-full standard-btn btn-standard-width y-gap back_btn" type="button"> < Back</button></a>
+            </div>           
+            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:35px;">Book Appointment</h2>
 
             <section class="layout-inputField input-section-gap">
                 <div class="inputHeader-row">

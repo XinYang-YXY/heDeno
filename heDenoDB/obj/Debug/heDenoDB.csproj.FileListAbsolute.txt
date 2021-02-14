@@ -49,3 +49,4 @@ C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
+C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache

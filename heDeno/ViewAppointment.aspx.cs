@@ -35,6 +35,19 @@ namespace heDeno
                 Response.Redirect("UpdateAppointment.aspx");
 
             }
+
+            if(e.CommandName == "CancelAppointment")
+            {
+                HiddenField id = e.Item.FindControl("hidden_id") as HiddenField;
+
+                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                int delete = client.CancelAppointment(int.Parse(id.Value));
+
+                if (delete == 1)
+                {
+                    Response.Redirect("ViewAppointment.aspx");
+                }
+            }
         }
     }
 }
