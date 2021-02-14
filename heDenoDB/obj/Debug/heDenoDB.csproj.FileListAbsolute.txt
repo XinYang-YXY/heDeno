@@ -50,3 +50,29 @@ C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.dll.config
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\heDenoDB.pdb
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\EntityFramework.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\MySql.Data.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\mysql.data.entity.EF6.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\MySqlConnector.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Buffers.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Memory.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\EntityFramework.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\MySqlConnector.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Buffers.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Memory.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Git Repos\heDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
+C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs.cache
+C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete
+C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.dll
+C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb

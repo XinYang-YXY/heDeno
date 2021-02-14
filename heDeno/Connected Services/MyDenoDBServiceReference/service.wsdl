@@ -68,6 +68,48 @@
   <wsdl:message name="IService1_GetDoctorByClinic_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDoctorByClinicResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_CreatePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreatePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPatientByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPatientByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updatePhoneNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhoneNum" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updatePhoneNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhoneNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_verifyEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verifyEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isEmailVerified_InputMessage">
+    <wsdl:part name="parameters" element="tns:isEmailVerified" />
+  </wsdl:message>
+  <wsdl:message name="IService1_isEmailVerified_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isEmailVerifiedResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -108,6 +150,34 @@
     <wsdl:operation name="GetDoctorByClinic">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoctorByClinic" message="tns:IService1_GetDoctorByClinic_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoctorByClinicResponse" message="tns:IService1_GetDoctorByClinic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreatePatient" message="tns:IService1_CreatePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreatePatientResponse" message="tns:IService1_CreatePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getPatientByEmail" message="tns:IService1_getPatientByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getPatientByEmailResponse" message="tns:IService1_getPatientByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getById" message="tns:IService1_getById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getByIdResponse" message="tns:IService1_getById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateEmail" message="tns:IService1_updateEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateEmailResponse" message="tns:IService1_updateEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePhoneNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updatePhoneNum" message="tns:IService1_updatePhoneNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updatePhoneNumResponse" message="tns:IService1_updatePhoneNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/verifyEmail" message="tns:IService1_verifyEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/verifyEmailResponse" message="tns:IService1_verifyEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isEmailVerified">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/isEmailVerified" message="tns:IService1_isEmailVerified_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/isEmailVerifiedResponse" message="tns:IService1_isEmailVerified_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -195,6 +265,69 @@
     </wsdl:operation>
     <wsdl:operation name="GetDoctorByClinic">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDoctorByClinic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatient">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreatePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientByEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/getPatientByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getById">
+      <soap:operation soapAction="http://tempuri.org/IService1/getById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhoneNum">
+      <soap:operation soapAction="http://tempuri.org/IService1/updatePhoneNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/verifyEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isEmailVerified">
+      <soap:operation soapAction="http://tempuri.org/IService1/isEmailVerified" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

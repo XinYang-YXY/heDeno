@@ -67,6 +67,11 @@
     max-width:310px;
 }
 
+/* Login page */
+.box-desktop-400 {
+    max-width: 400px;
+}
+
 .box-desktop-600{
     max-width:600px;
 }
@@ -75,7 +80,6 @@
 .box-desktop-900 {
     max-width: 900px;
 }
-
 
 
 .item-center{

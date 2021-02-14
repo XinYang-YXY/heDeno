@@ -9,698 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace heDeno.MyDenoDBServiceReference {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Appointment", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Appointment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int clinicIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string clinicNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string clinicTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int doctorIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime endDateTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string firstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string lastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int patientIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime startDateTimeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int clinicId {
-            get {
-                return this.clinicIdField;
-            }
-            set {
-                if ((this.clinicIdField.Equals(value) != true)) {
-                    this.clinicIdField = value;
-                    this.RaisePropertyChanged("clinicId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string clinicName {
-            get {
-                return this.clinicNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.clinicNameField, value) != true)) {
-                    this.clinicNameField = value;
-                    this.RaisePropertyChanged("clinicName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string clinicType {
-            get {
-                return this.clinicTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.clinicTypeField, value) != true)) {
-                    this.clinicTypeField = value;
-                    this.RaisePropertyChanged("clinicType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int doctorId {
-            get {
-                return this.doctorIdField;
-            }
-            set {
-                if ((this.doctorIdField.Equals(value) != true)) {
-                    this.doctorIdField = value;
-                    this.RaisePropertyChanged("doctorId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime endDateTime {
-            get {
-                return this.endDateTimeField;
-            }
-            set {
-                if ((this.endDateTimeField.Equals(value) != true)) {
-                    this.endDateTimeField = value;
-                    this.RaisePropertyChanged("endDateTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string firstName {
-            get {
-                return this.firstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
-                    this.firstNameField = value;
-                    this.RaisePropertyChanged("firstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string lastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
-                    this.lastNameField = value;
-                    this.RaisePropertyChanged("lastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int patientId {
-            get {
-                return this.patientIdField;
-            }
-            set {
-                if ((this.patientIdField.Equals(value) != true)) {
-                    this.patientIdField = value;
-                    this.RaisePropertyChanged("patientId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime startDateTime {
-            get {
-                return this.startDateTimeField;
-            }
-            set {
-                if ((this.startDateTimeField.Equals(value) != true)) {
-                    this.startDateTimeField = value;
-                    this.RaisePropertyChanged("startDateTime");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Specialty", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Specialty : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string specialtyDescField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string specialtyFullField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string specialtyNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string specialtyDesc {
-            get {
-                return this.specialtyDescField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.specialtyDescField, value) != true)) {
-                    this.specialtyDescField = value;
-                    this.RaisePropertyChanged("specialtyDesc");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string specialtyFull {
-            get {
-                return this.specialtyFullField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.specialtyFullField, value) != true)) {
-                    this.specialtyFullField = value;
-                    this.RaisePropertyChanged("specialtyFull");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string specialtyName {
-            get {
-                return this.specialtyNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.specialtyNameField, value) != true)) {
-                    this.specialtyNameField = value;
-                    this.RaisePropertyChanged("specialtyName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Clinic", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Clinic : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ClinicNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ClinicTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan EndTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan StartTimeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address {
-            get {
-                return this.AddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ClinicName {
-            get {
-                return this.ClinicNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClinicNameField, value) != true)) {
-                    this.ClinicNameField = value;
-                    this.RaisePropertyChanged("ClinicName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ClinicType {
-            get {
-                return this.ClinicTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ClinicTypeField, value) != true)) {
-                    this.ClinicTypeField = value;
-                    this.RaisePropertyChanged("ClinicType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan EndTime {
-            get {
-                return this.EndTimeField;
-            }
-            set {
-                if ((this.EndTimeField.Equals(value) != true)) {
-                    this.EndTimeField = value;
-                    this.RaisePropertyChanged("EndTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdField, value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNum {
-            get {
-                return this.PhoneNumField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneNumField, value) != true)) {
-                    this.PhoneNumField = value;
-                    this.RaisePropertyChanged("PhoneNum");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan StartTime {
-            get {
-                return this.StartTimeField;
-            }
-            set {
-                if ((this.StartTimeField.Equals(value) != true)) {
-                    this.StartTimeField = value;
-                    this.RaisePropertyChanged("StartTime");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Doctor", Namespace="http://schemas.datacontract.org/2004/07/heDenoDB.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Doctor : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int clientIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime dobField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string doctorFullField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string firstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string genderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string lastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string passwordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string phoneNumField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string signatureField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int clientId {
-            get {
-                return this.clientIdField;
-            }
-            set {
-                if ((this.clientIdField.Equals(value) != true)) {
-                    this.clientIdField = value;
-                    this.RaisePropertyChanged("clientId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime dob {
-            get {
-                return this.dobField;
-            }
-            set {
-                if ((this.dobField.Equals(value) != true)) {
-                    this.dobField = value;
-                    this.RaisePropertyChanged("dob");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string doctorFull {
-            get {
-                return this.doctorFullField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.doctorFullField, value) != true)) {
-                    this.doctorFullField = value;
-                    this.RaisePropertyChanged("doctorFull");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string firstName {
-            get {
-                return this.firstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.firstNameField, value) != true)) {
-                    this.firstNameField = value;
-                    this.RaisePropertyChanged("firstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string gender {
-            get {
-                return this.genderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.genderField, value) != true)) {
-                    this.genderField = value;
-                    this.RaisePropertyChanged("gender");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string lastName {
-            get {
-                return this.lastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lastNameField, value) != true)) {
-                    this.lastNameField = value;
-                    this.RaisePropertyChanged("lastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
-                    this.passwordField = value;
-                    this.RaisePropertyChanged("password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phoneNum {
-            get {
-                return this.phoneNumField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.phoneNumField, value) != true)) {
-                    this.phoneNumField = value;
-                    this.RaisePropertyChanged("phoneNum");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string signature {
-            get {
-                return this.signatureField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.signatureField, value) != true)) {
-                    this.signatureField = value;
-                    this.RaisePropertyChanged("signature");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDenoDBServiceReference.IService1")]
@@ -713,16 +22,16 @@ namespace heDeno.MyDenoDBServiceReference {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        heDeno.MyDenoDBServiceReference.CompositeType GetDataUsingDataContract(heDeno.MyDenoDBServiceReference.CompositeType composite);
+        heDenoDB.CompositeType GetDataUsingDataContract(heDenoDB.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.CompositeType> GetDataUsingDataContractAsync(heDeno.MyDenoDBServiceReference.CompositeType composite);
+        System.Threading.Tasks.Task<heDenoDB.CompositeType> GetDataUsingDataContractAsync(heDenoDB.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAppointmentsByPatientId", ReplyAction="http://tempuri.org/IService1/GetAppointmentsByPatientIdResponse")]
-        heDeno.MyDenoDBServiceReference.Appointment[] GetAppointmentsByPatientId(int id);
+        heDenoDB.Entity.Appointment[] GetAppointmentsByPatientId(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAppointmentsByPatientId", ReplyAction="http://tempuri.org/IService1/GetAppointmentsByPatientIdResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentsByPatientIdAsync(int id);
+        System.Threading.Tasks.Task<heDenoDB.Entity.Appointment[]> GetAppointmentsByPatientIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAppointment", ReplyAction="http://tempuri.org/IService1/CreateAppointmentResponse")]
         int CreateAppointment(System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
@@ -737,34 +46,76 @@ namespace heDeno.MyDenoDBServiceReference {
         System.Threading.Tasks.Task<int> UpdateAppointmentAsync(int id, System.DateTime startDateTime, System.DateTime endDateTime, int doctorId, int patientId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneAppointment", ReplyAction="http://tempuri.org/IService1/GetOneAppointmentResponse")]
-        heDeno.MyDenoDBServiceReference.Appointment GetOneAppointment(int id);
+        heDenoDB.Entity.Appointment GetOneAppointment(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneAppointment", ReplyAction="http://tempuri.org/IService1/GetOneAppointmentResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment> GetOneAppointmentAsync(int id);
+        System.Threading.Tasks.Task<heDenoDB.Entity.Appointment> GetOneAppointmentAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSpecialty", ReplyAction="http://tempuri.org/IService1/GetAllSpecialtyResponse")]
-        heDeno.MyDenoDBServiceReference.Specialty[] GetAllSpecialty();
+        heDenoDB.Entity.Specialty[] GetAllSpecialty();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllSpecialty", ReplyAction="http://tempuri.org/IService1/GetAllSpecialtyResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Specialty[]> GetAllSpecialtyAsync();
+        System.Threading.Tasks.Task<heDenoDB.Entity.Specialty[]> GetAllSpecialtyAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicBySpecialty", ReplyAction="http://tempuri.org/IService1/GetClinicBySpecialtyResponse")]
-        heDeno.MyDenoDBServiceReference.Clinic[] GetClinicBySpecialty(string specialty);
+        heDenoDB.Entity.Clinic[] GetClinicBySpecialty(string specialty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetClinicBySpecialty", ReplyAction="http://tempuri.org/IService1/GetClinicBySpecialtyResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic[]> GetClinicBySpecialtyAsync(string specialty);
+        System.Threading.Tasks.Task<heDenoDB.Entity.Clinic[]> GetClinicBySpecialtyAsync(string specialty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneClinic", ReplyAction="http://tempuri.org/IService1/GetOneClinicResponse")]
-        heDeno.MyDenoDBServiceReference.Clinic GetOneClinic(string clinic_name);
+        heDenoDB.Entity.Clinic GetOneClinic(string clinic_name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOneClinic", ReplyAction="http://tempuri.org/IService1/GetOneClinicResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic> GetOneClinicAsync(string clinic_name);
+        System.Threading.Tasks.Task<heDenoDB.Entity.Clinic> GetOneClinicAsync(string clinic_name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDoctorByClinic", ReplyAction="http://tempuri.org/IService1/GetDoctorByClinicResponse")]
-        heDeno.MyDenoDBServiceReference.Doctor[] GetDoctorByClinic(string clinic_id);
+        heDenoDB.Entity.Doctor[] GetDoctorByClinic(string clinic_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDoctorByClinic", ReplyAction="http://tempuri.org/IService1/GetDoctorByClinicResponse")]
-        System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Doctor[]> GetDoctorByClinicAsync(string clinic_id);
+        System.Threading.Tasks.Task<heDenoDB.Entity.Doctor[]> GetDoctorByClinicAsync(string clinic_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatient", ReplyAction="http://tempuri.org/IService1/CreatePatientResponse")]
+        int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatient", ReplyAction="http://tempuri.org/IService1/CreatePatientResponse")]
+        System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getPatientByEmail", ReplyAction="http://tempuri.org/IService1/getPatientByEmailResponse")]
+        heDenoDB.Entity.Patient getPatientByEmail(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getPatientByEmail", ReplyAction="http://tempuri.org/IService1/getPatientByEmailResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.Patient> getPatientByEmailAsync(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getById", ReplyAction="http://tempuri.org/IService1/getByIdResponse")]
+        heDenoDB.Entity.Patient getById(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getById", ReplyAction="http://tempuri.org/IService1/getByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.Patient> getByIdAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateEmail", ReplyAction="http://tempuri.org/IService1/updateEmailResponse")]
+        int updateEmail(string secretId, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateEmail", ReplyAction="http://tempuri.org/IService1/updateEmailResponse")]
+        System.Threading.Tasks.Task<int> updateEmailAsync(string secretId, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updatePhoneNum", ReplyAction="http://tempuri.org/IService1/updatePhoneNumResponse")]
+        int updatePhoneNum(string secretId, string phoneNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updatePhoneNum", ReplyAction="http://tempuri.org/IService1/updatePhoneNumResponse")]
+        System.Threading.Tasks.Task<int> updatePhoneNumAsync(string secretId, string phoneNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/verifyEmail", ReplyAction="http://tempuri.org/IService1/verifyEmailResponse")]
+        int verifyEmail(string secretId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/verifyEmail", ReplyAction="http://tempuri.org/IService1/verifyEmailResponse")]
+        System.Threading.Tasks.Task<int> verifyEmailAsync(string secretId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isEmailVerified", ReplyAction="http://tempuri.org/IService1/isEmailVerifiedResponse")]
+        bool isEmailVerified(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isEmailVerified", ReplyAction="http://tempuri.org/IService1/isEmailVerifiedResponse")]
+        System.Threading.Tasks.Task<bool> isEmailVerifiedAsync(string email);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -802,19 +153,19 @@ namespace heDeno.MyDenoDBServiceReference {
             return base.Channel.GetDataAsync(value);
         }
         
-        public heDeno.MyDenoDBServiceReference.CompositeType GetDataUsingDataContract(heDeno.MyDenoDBServiceReference.CompositeType composite) {
+        public heDenoDB.CompositeType GetDataUsingDataContract(heDenoDB.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.CompositeType> GetDataUsingDataContractAsync(heDeno.MyDenoDBServiceReference.CompositeType composite) {
+        public System.Threading.Tasks.Task<heDenoDB.CompositeType> GetDataUsingDataContractAsync(heDenoDB.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public heDeno.MyDenoDBServiceReference.Appointment[] GetAppointmentsByPatientId(int id) {
+        public heDenoDB.Entity.Appointment[] GetAppointmentsByPatientId(int id) {
             return base.Channel.GetAppointmentsByPatientId(id);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment[]> GetAppointmentsByPatientIdAsync(int id) {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Appointment[]> GetAppointmentsByPatientIdAsync(int id) {
             return base.Channel.GetAppointmentsByPatientIdAsync(id);
         }
         
@@ -834,44 +185,100 @@ namespace heDeno.MyDenoDBServiceReference {
             return base.Channel.UpdateAppointmentAsync(id, startDateTime, endDateTime, doctorId, patientId);
         }
         
-        public heDeno.MyDenoDBServiceReference.Appointment GetOneAppointment(int id) {
+        public heDenoDB.Entity.Appointment GetOneAppointment(int id) {
             return base.Channel.GetOneAppointment(id);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Appointment> GetOneAppointmentAsync(int id) {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Appointment> GetOneAppointmentAsync(int id) {
             return base.Channel.GetOneAppointmentAsync(id);
         }
         
-        public heDeno.MyDenoDBServiceReference.Specialty[] GetAllSpecialty() {
+        public heDenoDB.Entity.Specialty[] GetAllSpecialty() {
             return base.Channel.GetAllSpecialty();
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Specialty[]> GetAllSpecialtyAsync() {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Specialty[]> GetAllSpecialtyAsync() {
             return base.Channel.GetAllSpecialtyAsync();
         }
         
-        public heDeno.MyDenoDBServiceReference.Clinic[] GetClinicBySpecialty(string specialty) {
+        public heDenoDB.Entity.Clinic[] GetClinicBySpecialty(string specialty) {
             return base.Channel.GetClinicBySpecialty(specialty);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic[]> GetClinicBySpecialtyAsync(string specialty) {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Clinic[]> GetClinicBySpecialtyAsync(string specialty) {
             return base.Channel.GetClinicBySpecialtyAsync(specialty);
         }
         
-        public heDeno.MyDenoDBServiceReference.Clinic GetOneClinic(string clinic_name) {
+        public heDenoDB.Entity.Clinic GetOneClinic(string clinic_name) {
             return base.Channel.GetOneClinic(clinic_name);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Clinic> GetOneClinicAsync(string clinic_name) {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Clinic> GetOneClinicAsync(string clinic_name) {
             return base.Channel.GetOneClinicAsync(clinic_name);
         }
         
-        public heDeno.MyDenoDBServiceReference.Doctor[] GetDoctorByClinic(string clinic_id) {
+        public heDenoDB.Entity.Doctor[] GetDoctorByClinic(string clinic_id) {
             return base.Channel.GetDoctorByClinic(clinic_id);
         }
         
-        public System.Threading.Tasks.Task<heDeno.MyDenoDBServiceReference.Doctor[]> GetDoctorByClinicAsync(string clinic_id) {
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Doctor[]> GetDoctorByClinicAsync(string clinic_id) {
             return base.Channel.GetDoctorByClinicAsync(clinic_id);
+        }
+        
+        public int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password) {
+            return base.Channel.CreatePatient(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password) {
+            return base.Channel.CreatePatientAsync(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password);
+        }
+        
+        public heDenoDB.Entity.Patient getPatientByEmail(string email, string password) {
+            return base.Channel.getPatientByEmail(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Patient> getPatientByEmailAsync(string email, string password) {
+            return base.Channel.getPatientByEmailAsync(email, password);
+        }
+        
+        public heDenoDB.Entity.Patient getById(string id) {
+            return base.Channel.getById(id);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Patient> getByIdAsync(string id) {
+            return base.Channel.getByIdAsync(id);
+        }
+        
+        public int updateEmail(string secretId, string email) {
+            return base.Channel.updateEmail(secretId, email);
+        }
+        
+        public System.Threading.Tasks.Task<int> updateEmailAsync(string secretId, string email) {
+            return base.Channel.updateEmailAsync(secretId, email);
+        }
+        
+        public int updatePhoneNum(string secretId, string phoneNum) {
+            return base.Channel.updatePhoneNum(secretId, phoneNum);
+        }
+        
+        public System.Threading.Tasks.Task<int> updatePhoneNumAsync(string secretId, string phoneNum) {
+            return base.Channel.updatePhoneNumAsync(secretId, phoneNum);
+        }
+        
+        public int verifyEmail(string secretId) {
+            return base.Channel.verifyEmail(secretId);
+        }
+        
+        public System.Threading.Tasks.Task<int> verifyEmailAsync(string secretId) {
+            return base.Channel.verifyEmailAsync(secretId);
+        }
+        
+        public bool isEmailVerified(string email) {
+            return base.Channel.isEmailVerified(email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isEmailVerifiedAsync(string email) {
+            return base.Channel.isEmailVerifiedAsync(email);
         }
     }
 }

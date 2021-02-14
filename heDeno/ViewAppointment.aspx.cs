@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using heDenoDB.Entity;
+
 namespace heDeno
 {
     public partial class ViewAppointment : System.Web.UI.Page

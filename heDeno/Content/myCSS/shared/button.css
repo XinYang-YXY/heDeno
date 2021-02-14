@@ -11,6 +11,7 @@
     padding-top:6px;
     padding-bottom: 6px;
 }
+
     .standard-btn:hover {
         background-color: #5c73f2;
         color: white;
@@ -26,3 +27,61 @@
     margin-bottom: 10px;
     
 }
+
+/* Custom Radio button */
+.rb-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-rb {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+
+    .custom-rb input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.custom-rb:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.custom-rb input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-rb input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-rb .checkmark:after {
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+/* Custom radio button end*/

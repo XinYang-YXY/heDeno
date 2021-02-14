@@ -43,6 +43,28 @@ namespace heDenoDB
         [OperationContract]
         List<Doctor> GetDoctorByClinic(string clinic_id);
 
+        // Patient operation contract
+        [OperationContract]
+        int CreatePatient(Guid uuid, string email, string phoneNum, string firstName,
+            string lastName, DateTime dateOfBirth, string gender, string password);
+
+        [OperationContract]
+        Patient getPatientByEmail(string email, string password);
+
+        [OperationContract]
+        Patient getById(string id);
+
+        [OperationContract]
+        int updateEmail(string secretId, string email);
+
+        [OperationContract]
+        int updatePhoneNum(string secretId, string phoneNum);
+
+        [OperationContract]
+        int verifyEmail(string secretId);
+
+        [OperationContract]
+        bool isEmailVerified(string email);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

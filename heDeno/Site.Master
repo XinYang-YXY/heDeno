@@ -43,6 +43,39 @@
             </Scripts>
         </asp:ScriptManager>
 
+                <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand grey-blue montserrat font-weight-bold logo-opacity logo-size" runat="server" href="~/">ClinicDeno</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                    <% if (Session["user"] != null) { %>
+                    <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/Patient_info">
+                            Hello, <%=Session["user"].ToString() %>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <asp:Button ID="btn_logout" runat="server" Text="Logout" OnClick="btn_logout_Click" class="nav-link grey-blue navigation-opacity montserrat"/>
+                    </li>
+                    <% } %>
+                    <% else {%>
+                    <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/Register">Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/Login">Login
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Body -->
         <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
