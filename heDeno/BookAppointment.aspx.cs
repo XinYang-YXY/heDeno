@@ -66,6 +66,8 @@ namespace heDeno
                 select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
                 select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
                 select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
+                select_doctor.Items.Clear();
+                select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
                 select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
                 available_timeslots.Items.Clear();
                 select_date.Text = "";
@@ -125,7 +127,6 @@ namespace heDeno
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.ParseExact(select_date.Text, "yyyy-MM-dd", null);
             TimeSpan time = TimeSpan.Parse(available_timeslots.SelectedItem.Value);
 
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
@@ -187,7 +188,5 @@ namespace heDeno
                 }
             }
         }
-
-        
     }
 }
