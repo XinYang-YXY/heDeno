@@ -23,10 +23,10 @@ namespace heDenoDB
         List <Appointment> GetAppointmentsByPatientId(int id);
 
         [OperationContract]
-        int CreateAppointment(DateTime startDateTime, int doctorId, int patientId);
+        int CreateAppointment(string date, TimeSpan time, int doctorId, int patientId);
 
         [OperationContract]
-        int UpdateAppointment(int id, DateTime startDateTime, int doctorId, int patientId);
+        int UpdateAppointment(int id, string date, TimeSpan time, int doctorId, int patientId);
 
         [OperationContract]
         Appointment GetOneAppointment(int id);
@@ -43,6 +43,8 @@ namespace heDenoDB
         [OperationContract]
         List<Doctor> GetDoctorByClinic(string clinic_id);
 
+        [OperationContract]
+        List<Appointment> GetAllAppointmentsByDoctorAndDate(int doctorId, string date);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

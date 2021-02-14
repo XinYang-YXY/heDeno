@@ -14,21 +14,19 @@ namespace heDeno
     {
         int appointment_id = 0;
         string clinicId, clinicType, doctorId;
-        string startDateTime, endDateTime, date;
+        string startDateTime, date;
 
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            DateTime u_date = DateTime.ParseExact(select_date.Text, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
-            var u_startTime = DateTime.ParseExact(select_start_time.Text, "HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            DateTime u_startDateTime = new DateTime(u_date.Year, u_date.Month, u_date.Day, u_startTime.Hour, u_startTime.Minute, u_startTime.Second);
-
+            TimeSpan time = TimeSpan.Parse(select_start_time.Text);
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-            int update = client.UpdateAppointment(appointment_id, u_startDateTime, int.Parse(select_doctor.SelectedValue), 1);
+            int update = client.UpdateAppointment(appointment_id, select_date.Text, time, int.Parse(select_doctor.SelectedValue), 1);
 
             if (update == 1)
             {
                 Response.Redirect("AppointmentSuccess");
+                Session.Clear();
             }
         }
 
@@ -183,18 +181,16 @@ namespace heDeno
             {
                 MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
                 Appointment appointmentObj = client.GetOneAppointment(appointment_id);
-                if(appointmentObj !=null) 
+                if(appointmentObj != null) 
                 {
                     clinicType = appointmentObj.clinicType;
                     clinicId = appointmentObj.clinicId.ToString();
                     doctorId = appointmentObj.doctorId.ToString();
-                    var a = appointmentObj.startDateTime;
-                    date = a.ToString("yyyy-MM-dd");
-                    startDateTime = a.ToString("HH:mm");
+                    date = appointmentObj.date.ToString();
+                    startDateTime = appointmentObj.time.ToString();
                 } else
                 {
-                    lbl_msg.ForeColor = System.Drawing.Color.Red;
-                    lbl_msg.Text = "NO DATA FOUND";
+                    Response.Redirect("/");
                 }
             }
             catch(Exception ex)

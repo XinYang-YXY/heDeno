@@ -177,8 +177,8 @@ C:\Users\livin\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.xml
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.pdb
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.dll
 C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.pdb
+C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
