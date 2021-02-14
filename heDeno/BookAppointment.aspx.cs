@@ -133,7 +133,7 @@ namespace heDeno
 
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
             //Patient id is 1 for now.
-            int result = client.CreateAppointment(select_date.Text, time, int.Parse(select_doctor.SelectedValue), 1);
+            int result = client.CreateAppointment(select_date.Text, time, int.Parse(select_doctor.SelectedValue), Int32.Parse(Session["id"].ToString()));
             if (result == 1)
             {
                 Response.Redirect("AppointmentSuccess");
