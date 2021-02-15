@@ -39,6 +39,7 @@ namespace heDeno
         protected void Button1_Click(object sender, EventArgs e)
         {
             string selected_specialty = select_specialty.SelectedValue;
+            specialty = selected_specialty;
             getClinicList(selected_specialty);
         }
 
