@@ -56,6 +56,11 @@
                     </li>
                     <% if (Session["user"] != null) { %>
                     <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/ViewAppointment">
+                            View Appointments
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/Patient_info">
                             Hello, <%=Session["user"].ToString() %>
                         </a>
