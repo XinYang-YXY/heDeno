@@ -15,16 +15,29 @@ namespace heDeno
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["Appointment_id"] = null;
-            List<Appointment> appList = new List<Appointment>();
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
+            {
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                {
+                    Response.Redirect("/Login", false);
+                }
+                else
+                {
+                    Session["Appointment_id"] = null;
+                    List<Appointment> appList = new List<Appointment>();
 
-            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-            //Patient id is 1 for now.
-            appList = client.GetAppointmentsByPatientId(1).ToList<Appointment>();
+                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                    appList = client.GetAppointmentsByPatientId(Int32.Parse(Session["id"].ToString())).ToList<Appointment>();
 
-            appointment_repeater.Visible = true;
-            appointment_repeater.DataSource = appList;
-            appointment_repeater.DataBind();
+                    appointment_repeater.Visible = true;
+                    appointment_repeater.DataSource = appList;
+                    appointment_repeater.DataBind();
+                }
+            }
+            else
+            {
+                Response.Redirect("/Login", false);
+            }
         }
 
         protected void appointment_repeater_ItemCommand(object source, RepeaterCommandEventArgs e)
