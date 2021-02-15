@@ -34,5 +34,22 @@ namespace heDeno
                 Response.Cookies["AuthToken"].Expires = DateTime.Now.AddMonths(-20);
             }
         }
+
+        public bool isUserLogged(object sender, EventArgs e)
+        {
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
+            {
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        protected void btn_bookAppointment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/BookAppointment");
+        }
     }
 }

@@ -81,7 +81,16 @@
     max-width: 900px;
 }
 
+/* Clinic List*/
+.clinic-info {
+    display: block;
+    color: #829FD9;
+}
 
 .item-center{
     text-align:center;
+}
+
+.vertical-center {
+    align-items: center;
 }

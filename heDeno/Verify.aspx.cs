@@ -15,13 +15,13 @@ using System.Net;
 using System.IO;
 
 
-
 namespace heDeno
 {
     public partial class Verify : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         { 
+            
             string id = Request.QueryString["id"];
             HttpClient client = new HttpClient();
 
@@ -43,8 +43,9 @@ namespace heDeno
 
             if (data == 1)
             {
-                lbl_result.Text = "Congratulations, you have verified your account! You can login to your account now.";
-            }            
+                lbl_result.Text = "Congratulations, you have verified your account! You can login now.";
+            }
+            
         }
     }
 }

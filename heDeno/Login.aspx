@@ -16,7 +16,7 @@
                         <asp:TextBox ID="tb_password" runat="server" class="standard-inputField w-100" placeholder="Password" required TextMode="Password"></asp:TextBox>
                     </div>
                 </div>
-                <asp:Button ID="btn_login" runat="server" Text="Login" class="montserrat rounded-full standard-btn w-80 y-gap" OnClick="btn_login_Click"/>
+                <asp:Button ID="btn_login" runat="server" Text="Login" class="montserrat rounded-full standard-btn btn-standard-width y-gap" OnClick="btn_login_Click"/>
                 <a class="nav-link grey-blue navigation-opacity montserrat small-text mb-5" runat="server" href="~/">
                     Forgot your Email or Password?
                 </a>

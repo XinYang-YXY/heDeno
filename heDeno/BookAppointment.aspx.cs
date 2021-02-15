@@ -15,39 +15,52 @@ namespace heDeno
 {
     public partial class BookAppointment : System.Web.UI.Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");           
-
-            if (!IsPostBack)
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
             {
-                try
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
                 {
-                    List<Specialty> specialtyList = new List<Specialty>();
-                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                    specialtyList = client.GetAllSpecialty().ToList<Specialty>();
-
-                    select_specialty.DataSource = specialtyList;
-                    select_specialty.DataTextField = "specialtyFull";
-                    select_specialty.DataValueField = "specialtyName";
-                    select_specialty.DataBind();
-
-                    select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
-                    select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
-                    select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
-                    select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
-                    select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
-                    select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
-                    available_timeslots.Items.Clear();
+                    Response.Redirect("/Login", false);
                 }
-                catch (Exception ex)
+                else
                 {
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }               
+                    select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");
+
+                    if (!IsPostBack)
+                    {
+                        try
+                        {
+                            List<Specialty> specialtyList = new List<Specialty>();
+                            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                            specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+
+                            select_specialty.DataSource = specialtyList;
+                            select_specialty.DataTextField = "specialtyFull";
+                            select_specialty.DataValueField = "specialtyName";
+                            select_specialty.DataBind();
+
+                            select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
+                            select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
+                            select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
+                            select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
+                            select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
+                            select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
+                            available_timeslots.Items.Clear();
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+                    }
+                }
             }
-            
+            else
+            {
+                Response.Redirect("/Login", false);
+            }            
+
+
         }
 
         protected void select_specialty_SelectedIndexChanged(object sender, EventArgs e)

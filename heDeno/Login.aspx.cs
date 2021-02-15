@@ -40,6 +40,10 @@ namespace heDeno
                     readTask.Wait();
                     isEmailVerified = readTask.Result;
                 }
+                else
+                {
+                    lbl_error.Text = "An fetch error hsas occured";
+                }
 
                 if (isEmailVerified)
                 {
@@ -58,10 +62,6 @@ namespace heDeno
                 {
                     lbl_error.Text = "Please verify your email first";
                 }
-
-
-
-
             }
             else
             {

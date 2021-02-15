@@ -180,7 +180,7 @@
   <xs:element name="CreatePatient">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uuid" type="q9:guid" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uuid" type="q12:guid" />
         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="phoneNum" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
@@ -209,7 +209,7 @@
   <xs:element name="getPatientByEmailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="getPatientByEmailResult" nillable="true" type="q10:Patient" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="getPatientByEmailResult" nillable="true" type="q13:Patient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -223,7 +223,7 @@
   <xs:element name="getByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="getByIdResult" nillable="true" type="q11:Patient" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="getByIdResult" nillable="true" type="q14:Patient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

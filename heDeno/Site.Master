@@ -50,7 +50,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="align-items: center;">
+                    <li class="nav-item" style="margin-left: 20px; margin-right: 20px;">
+                       <asp:Button ID="btn_bookAppointment" href="BookAppointment.aspx" runat="server" class="montserrat rounded-full standard-btn btn-standard-width y-gap" Text="Book Appointment" OnClick="btn_bookAppointment_Click"/>
+                    </li>
                     <% if (Session["user"] != null) { %>
                     <li class="nav-item">
                         <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/Patient_info">
