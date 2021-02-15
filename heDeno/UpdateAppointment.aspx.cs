@@ -23,7 +23,7 @@ namespace heDeno
         {
             TimeSpan time = TimeSpan.Parse(available_timeslots.SelectedItem.Value);
             MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-            int update = client.UpdateAppointment(appointment_id, select_date.Text, time, int.Parse(select_doctor.SelectedValue), 1);
+            int update = client.UpdateAppointment(appointment_id, select_date.Text, time, int.Parse(select_doctor.SelectedValue), Int32.Parse(Session["id"].ToString()));
 
             if (update == 1)
             {
@@ -34,86 +34,100 @@ namespace heDeno
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var s_aid = (string)Session["Appointment_id"];
-
-            if (s_aid != null)
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
             {
-                appointment_id = int.Parse(Session["Appointment_id"].ToString());
-            }          
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                {
+                    Response.Redirect("/Login", false);
+                }
+                else
+                {
+                    var s_aid = (string)Session["Appointment_id"];
 
-            retreiveData();           
-            select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");           
-            
-            if (!IsPostBack && appointment_id > 0)
+                    if (s_aid != null)
+                    {
+                        appointment_id = int.Parse(Session["Appointment_id"].ToString());
+                    }
+
+                    retreiveData();
+                    select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");
+
+                    if (!IsPostBack && appointment_id > 0)
+                    {
+                        try
+                        {
+                            available_timeslots.Items.Clear();
+
+                            List<Specialty> specialtyList = new List<Specialty>();
+                            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                            specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+
+                            select_specialty.DataSource = specialtyList;
+                            select_specialty.DataTextField = "specialtyFull";
+                            select_specialty.DataValueField = "specialtyName";
+                            select_specialty.DataBind();
+
+                            select_specialty.Items.FindByValue(clinicType).Selected = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+
+
+                        string selected_specialty = select_specialty.SelectedValue;
+                        try
+                        {
+                            List<Clinic> clinicList = new List<Clinic>();
+                            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                            clinicList = client.GetClinicBySpecialty(selected_specialty).ToList<Clinic>();
+
+                            select_clinic.DataSource = clinicList;
+                            select_clinic.DataTextField = "clinicName";
+                            select_clinic.DataValueField = "id";
+                            select_clinic.DataBind();
+
+                            select_clinic.Items.FindByValue(clinicId).Selected = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+
+                        string selected_clinic = select_clinic.SelectedValue;
+                        try
+                        {
+                            List<Doctor> doctorList = new List<Doctor>();
+                            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                            doctorList = client.GetDoctorByClinic(selected_clinic).ToList<Doctor>();
+
+                            select_doctor.DataSource = doctorList;
+                            select_doctor.DataTextField = "doctorFull";
+                            select_doctor.DataValueField = "id";
+                            select_doctor.DataBind();
+
+
+                            select_doctor.Items.FindByValue(doctorId).Selected = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.ToString());
+                        }
+
+                        select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
+                        select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
+                        select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
+                        select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
+                        select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
+                        select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
+                        select_date.Text = date;
+                        timeslot(int.Parse(doctorId), date);
+                    }
+                }
+            }
+            else
             {
-                try
-                {                  
-                    available_timeslots.Items.Clear();
-
-                    List<Specialty> specialtyList = new List<Specialty>();
-                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                    specialtyList = client.GetAllSpecialty().ToList<Specialty>();
-
-                    select_specialty.DataSource = specialtyList;
-                    select_specialty.DataTextField = "specialtyFull";
-                    select_specialty.DataValueField = "specialtyName";
-                    select_specialty.DataBind();
-
-                    select_specialty.Items.FindByValue(clinicType).Selected = true;                  
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-
-
-                string selected_specialty = select_specialty.SelectedValue;
-                try
-                {
-                    List<Clinic> clinicList = new List<Clinic>();
-                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                    clinicList = client.GetClinicBySpecialty(selected_specialty).ToList<Clinic>();
-
-                    select_clinic.DataSource = clinicList;
-                    select_clinic.DataTextField = "clinicName";
-                    select_clinic.DataValueField = "id";
-                    select_clinic.DataBind();
-
-                    select_clinic.Items.FindByValue(clinicId).Selected = true;
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-
-                string selected_clinic = select_clinic.SelectedValue;
-                try
-                {
-                    List<Doctor> doctorList = new List<Doctor>();
-                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                    doctorList = client.GetDoctorByClinic(selected_clinic).ToList<Doctor>();
-
-                    select_doctor.DataSource = doctorList;
-                    select_doctor.DataTextField = "doctorFull";
-                    select_doctor.DataValueField = "id";
-                    select_doctor.DataBind();
-                    
-                    
-                    select_doctor.Items.FindByValue(doctorId).Selected = true;
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-                
-                select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
-                select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
-                select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
-                select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
-                select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
-                select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
-                select_date.Text = date;
-                timeslot(int.Parse(doctorId), date);
+                Response.Redirect("/Login", false);
             }
         }
 

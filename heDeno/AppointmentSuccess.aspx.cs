@@ -11,7 +11,17 @@ namespace heDeno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
+            {
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
+                {
+                    Response.Redirect("/Login", false);
+                }
+            }
+            else
+            {
+                Response.Redirect("/Login", false);
+            }
         }
 
         protected void btn_backHome_Click(object sender, EventArgs e)

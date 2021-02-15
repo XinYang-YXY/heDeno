@@ -12,6 +12,17 @@
             text-align:left !important;
             margin-left: 30px;
         }
+        .btn-outline-success{
+            color: #5C73F2 !important;
+            border-color: #5C73F2 !important;
+        }
+        .btn-outline-success:hover{
+            color: white !important;
+            background-color: #5C73F2 !important;
+        }
+        label{
+            margin-bottom: 0px;
+        }
     </style>
 
     <section class="vertical-middle-landing">

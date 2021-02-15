@@ -12,6 +12,17 @@
             text-align:left !important;
             margin-left: 30px;
         }
+        .btn-outline-success{
+            color: #5C73F2 !important;
+            border-color: #5C73F2 !important;
+        }
+        .btn-outline-success:hover{
+            color: white !important;
+            background-color: #5C73F2 !important;
+        }
+        label{
+            margin-bottom: 0px;
+        }
     </style>
 
     <section class="vertical-middle-landing">
@@ -19,7 +30,7 @@
             <div class="back_btn-div">
                 <a href="/ViewAppointment.aspx"><button id="btn_back" class="montserrat rounded-full standard-btn btn-standard-width y-gap back_btn" type="button"> < Back</button></a>
             </div> 
-            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:20px;">Update Appointment</h2>
+            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:35px;">Update Appointment</h2>
 
             <section class="layout-inputField input-section-gap">
                 <div class="inputHeader-row">
