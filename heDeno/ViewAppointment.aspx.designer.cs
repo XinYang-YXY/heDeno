@@ -15,12 +15,21 @@ namespace heDeno
     {
 
         /// <summary>
-        /// appointment_repeater control.
+        /// upcoming_appointment_repeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater appointment_repeater;
+        protected global::System.Web.UI.WebControls.Repeater upcoming_appointment_repeater;
+
+        /// <summary>
+        /// past_appointment_repeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater past_appointment_repeater;
     }
 }

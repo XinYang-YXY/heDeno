@@ -25,13 +25,31 @@ namespace heDeno
                 {
                     Session["Appointment_id"] = null;
                     List<Appointment> appList = new List<Appointment>();
+                    List<Appointment> pastAppList = new List<Appointment>();
+                    List<Appointment> upcomingAppList = new List<Appointment>();
 
                     MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
                     appList = client.GetAppointmentsByPatientId(Int32.Parse(Session["id"].ToString())).ToList<Appointment>();
 
-                    appointment_repeater.Visible = true;
-                    appointment_repeater.DataSource = appList;
-                    appointment_repeater.DataBind();
+                    foreach (var app in appList)
+                    {
+                        if (DateTime.Parse(app.date) > DateTime.Now.Date)
+                        {
+                            upcomingAppList.Add(app);
+                        }
+                        else
+                        {
+                            pastAppList.Add(app);
+                        }
+                    }
+
+                    upcoming_appointment_repeater.Visible = true;
+                    upcoming_appointment_repeater.DataSource = upcomingAppList;
+                    upcoming_appointment_repeater.DataBind();
+
+                    past_appointment_repeater.Visible = true;
+                    past_appointment_repeater.DataSource = pastAppList;
+                    past_appointment_repeater.DataBind();
                 }
             }
             else
@@ -40,7 +58,7 @@ namespace heDeno
             }
         }
 
-        protected void appointment_repeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected void upcoming_appointment_repeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if(e.CommandName == "UpdateAppointment")
             {
@@ -63,6 +81,10 @@ namespace heDeno
                     Response.Redirect("ViewAppointment.aspx");
                 }
             }
+        }
+
+        protected void past_appointment_repeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
         }
     }
 }
