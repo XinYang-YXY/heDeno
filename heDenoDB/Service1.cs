@@ -122,5 +122,16 @@ namespace heDenoDB
             Patient patient = new Patient();
             return patient.isEmailVerified(email);
         }
+
+        public List<MedicalCertificate> SelectMCById(string givenPatientId)
+        {
+            MedicalCertificate medicalCertificate = new MedicalCertificate();
+            return medicalCertificate.SelectMCById(givenPatientId);
+        }
+        public MedicalCertificate SelectOneMCById(string givenMCId)
+        {
+            MedicalCertificate medicalCertificate = new MedicalCertificate();
+            return medicalCertificate.SelectOneMCById(givenMCId);
+        }
     }
 }

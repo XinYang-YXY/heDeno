@@ -43,7 +43,7 @@
                                            <p>Clinic Name: <b><%#Eval("clinicName")%></b></p> 
                                            <p>Doctor: <b><%#Eval("firstName")%></b> <b><%#Eval("lastName")%></b></p>
                                            <p>Specialty: <b><%#Eval("clinicType")%></b></p>
-                                           <p>Appointment Time: <b><%#Eval("date")%></b> <b><%#Eval("time")%></b></p>    
+                                           <p>Appointment Time: <b><%#DateTime.Parse(Eval("date").ToString()).ToString("dd/MM/yyyy")%></b> <b><%#Eval("time")%></b></p>    
                                            <asp:HiddenField runat="server" ID="hidden_id" Value='<%#Eval("id")%>' />
                                        </div>
                                 
@@ -79,6 +79,7 @@
                                        </div>
                                 
                                        <div class="col-12 d-flex flex-row-reverse" style="margin-top:10px;">
+<%--                                           <a href="/PatientMC/?mc=<%#Eval("MCId")%>"<button class="montserrat rounded-full standard-btn btn-standard-width y-gap item-center btn_cancel view_app_btn">View MC</button></a>--%>
                                        </div>
                                    </div>                    
                                </div>

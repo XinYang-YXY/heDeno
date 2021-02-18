@@ -251,6 +251,7 @@
     <Content Include="Properties\DataSources\heDenoDB.Entity.Doctor.datasource" />
     <Content Include="Properties\DataSources\heDenoDB.Entity.Patient.datasource" />
     <Content Include="Properties\DataSources\heDenoDB.Entity.Specialty.datasource" />
+    <Content Include="Properties\DataSources\heDenoDB.Entity.MedicalCertificate.datasource" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -358,6 +359,7 @@
     <Content Include="UpdateAppointment.aspx" />
     <Content Include="Verify.aspx" />
     <Content Include="ViewAppointment.aspx" />
+    <Content Include="ViewMC.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -485,6 +487,13 @@
     </Compile>
     <Compile Include="ViewAppointment.aspx.designer.cs">
       <DependentUpon>ViewAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMC.aspx.cs">
+      <DependentUpon>ViewMC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMC.aspx.designer.cs">
+      <DependentUpon>ViewMC.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

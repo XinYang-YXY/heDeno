@@ -9,7 +9,7 @@
     <div class="container montserrat card pt-2">
         <h3 class="text-center" style="margin-bottom:35px;">Medical Certificate</h3>
         <div class="d-flex flex-start">
-            <p>MC ID: <span runat="server" id="mc_id">1</span></p>
+            <p>MC ID: <span runat="server" id="mcid">1</span></p>
         </div>        
         <div class="d-flex justify-content-between" style="margin-bottom:3.5rem;">
             <div>
@@ -23,7 +23,7 @@
             <p>This is to certify that above-named is unfit for <span runat="server" id="duration">2 days</span> from <span runat="server" id="start_date">19-Apr-2018</span> to <span runat="server" id="end_date">20-Apr-2018</span>.</p>
         </div>
         <div>
-            <p>Type of medical leave granted: <span runat="server" id="medical_leave">Hospitaliation Leave</span></p>
+<%--            <p>Type of medical leave granted: <span runat="server" id="medical_leave">Hospitaliation Leave</span></p>--%>
         </div>
         <div style="margin-bottom:3.5rem;">
             <p>Comments:</p>
@@ -46,17 +46,17 @@
         <div class="row" style="margin-bottom:3.5rem;">
             <div class="col-lg-4 col-4">
                 <p>DATE :</p>
-                <span runat="server" id="date">Dr Lim</span>
+                <span runat="server" id="date">2020/11/12</span>
             </div>
             <div class="col-lg-4 col-4">
-                <p>DOCTOR SIGNATURE:</p>
-                <span runat="server" id="doctor_signature">????</span>
+                <%--<p>DOCTOR SIGNATURE:</p>
+                <span runat="server" id="doctor_signature">????</span>--%>
             </div>
             <div class="col-lg-4 col-4">
             </div>
         </div>
-        <div>
-            <p class="text-center">This medical certificate is retrieved from <span runat="server" id="mc_url">https://www.google.com</span></p>
+        <div class="text-center">
+            <p>This medical certificate is electronically generated. No signature is required.</p>
         </div>
         <div class="text-center">
             <asp:Placeholder ID="placeholder_qrcode" runat="server"/>
