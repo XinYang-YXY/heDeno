@@ -122,6 +122,18 @@
   <wsdl:message name="IService1_isEmailVerified_OutputMessage">
     <wsdl:part name="parameters" element="tns:isEmailVerifiedResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_SelectMCById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMCById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectMCById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMCByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMCById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMCById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectOneMCById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectOneMCByIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -198,6 +210,14 @@
     <wsdl:operation name="isEmailVerified">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/isEmailVerified" message="tns:IService1_isEmailVerified_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/isEmailVerifiedResponse" message="tns:IService1_isEmailVerified_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMCById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectMCById" message="tns:IService1_SelectMCById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectMCByIdResponse" message="tns:IService1_SelectMCById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMCById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectOneMCById" message="tns:IService1_SelectOneMCById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectOneMCByIdResponse" message="tns:IService1_SelectOneMCById_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -366,6 +386,24 @@
     </wsdl:operation>
     <wsdl:operation name="isEmailVerified">
       <soap:operation soapAction="http://tempuri.org/IService1/isEmailVerified" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMCById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectMCById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectOneMCById">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectOneMCById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

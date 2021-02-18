@@ -70,6 +70,11 @@ namespace heDenoDB
 
         [OperationContract]
         bool isEmailVerified(string email);
+
+        [OperationContract]
+        List<MedicalCertificate> SelectMCById(string givenPatientId);
+        [OperationContract]
+        MedicalCertificate SelectOneMCById(string givenMCId);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

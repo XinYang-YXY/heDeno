@@ -285,4 +285,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelectMCById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMCByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectMCByIdResult" nillable="true" type="q15:ArrayOfMedicalCertificate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMCById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMCId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMCByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectOneMCByIdResult" nillable="true" type="q16:MedicalCertificate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

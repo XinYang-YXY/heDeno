@@ -128,6 +128,18 @@ namespace heDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/isEmailVerified", ReplyAction="http://tempuri.org/IService1/isEmailVerifiedResponse")]
         System.Threading.Tasks.Task<bool> isEmailVerifiedAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMCById", ReplyAction="http://tempuri.org/IService1/SelectMCByIdResponse")]
+        heDenoDB.Entity.MedicalCertificate[] SelectMCById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMCById", ReplyAction="http://tempuri.org/IService1/SelectMCByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate[]> SelectMCByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMCById", ReplyAction="http://tempuri.org/IService1/SelectOneMCByIdResponse")]
+        heDenoDB.Entity.MedicalCertificate SelectOneMCById(string givenMCId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMCById", ReplyAction="http://tempuri.org/IService1/SelectOneMCByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -307,6 +319,22 @@ namespace heDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<bool> isEmailVerifiedAsync(string email) {
             return base.Channel.isEmailVerifiedAsync(email);
+        }
+        
+        public heDenoDB.Entity.MedicalCertificate[] SelectMCById(string givenPatientId) {
+            return base.Channel.SelectMCById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate[]> SelectMCByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMCByIdAsync(givenPatientId);
+        }
+        
+        public heDenoDB.Entity.MedicalCertificate SelectOneMCById(string givenMCId) {
+            return base.Channel.SelectOneMCById(givenMCId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId) {
+            return base.Channel.SelectOneMCByIdAsync(givenMCId);
         }
     }
 }

@@ -15,13 +15,13 @@ namespace heDeno
     {
 
         /// <summary>
-        /// mc_id control.
+        /// mcid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mc_id;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mcid;
 
         /// <summary>
         /// patient_name control.
@@ -69,15 +69,6 @@ namespace heDeno
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl end_date;
 
         /// <summary>
-        /// medical_leave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl medical_leave;
-
-        /// <summary>
         /// comments control.
         /// </summary>
         /// <remarks>
@@ -121,24 +112,6 @@ namespace heDeno
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl date;
-
-        /// <summary>
-        /// doctor_signature control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl doctor_signature;
-
-        /// <summary>
-        /// mc_url control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mc_url;
 
         /// <summary>
         /// placeholder_qrcode control.

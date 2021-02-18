@@ -89,4 +89,29 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Patient" nillable="true" type="tns:Patient" />
+  <xs:complexType name="ArrayOfMedicalCertificate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalCertificate" nillable="true" type="tns:MedicalCertificate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicalCertificate" nillable="true" type="tns:ArrayOfMedicalCertificate" />
+  <xs:complexType name="MedicalCertificate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppointmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctorId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoctorSignature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="appointmentDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clinicName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clinicType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MedicalCertificate" nillable="true" type="tns:MedicalCertificate" />
 </xs:schema>
