@@ -195,5 +195,46 @@ namespace heDenoDB.Entity
             }
             return clinicList;
         }
+
+        public Clinic SelectClinicById(string givenClinicId)
+        {
+            //Customer cust = new Customer("111", "Phoon LK", "Nanyang Polytechnic", "560860", "61234567", "91234567");
+            //return cust;
+
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from web.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter to retrieve data from the database table
+            string sqlstmt = "Select * from Clinic where id = @paraClinicId";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraClinicId", givenClinicId);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet.
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            Clinic obj = null;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                string clinicId = row["id"].ToString();
+                string address = row["address"].ToString();
+                string phoneNum = row["phoneNum"].ToString();
+                string email = row["email"].ToString();
+                string clinicName = row["clinicName"].ToString();
+                string clinicType = row["clinicType"].ToString();
+                TimeSpan startTime = TimeSpan.Parse(row["startTime"].ToString());
+                TimeSpan endTime = TimeSpan.Parse(row["endTime"].ToString());
+
+                obj = new Clinic(clinicId, address, phoneNum, email, clinicName, clinicType, startTime, endTime);
+            }
+            return obj;
+        }
     }
 }

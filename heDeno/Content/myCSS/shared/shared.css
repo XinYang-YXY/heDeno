@@ -94,3 +94,9 @@
 .vertical-center {
     align-items: center;
 }
+
+/* Added by Qihan */
+
+.box-desktop-950 {
+    max-width: 950px;
+}

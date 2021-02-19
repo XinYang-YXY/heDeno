@@ -11,6 +11,7 @@ namespace heDenoDB.Entity
 {
     public class Patient
     {
+        public string ID { get; set; }
         public string SecretId { get; set; }
         public string Email { get; set; }
         public string PhoneNum { get; set; }
@@ -18,6 +19,7 @@ namespace heDenoDB.Entity
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
+        public string NRIC { get; set; }
 
         public Patient()
         {
@@ -34,6 +36,20 @@ namespace heDenoDB.Entity
             LastName = lastName;
             DateOfBirth = dateOfBirth;
             Gender = gender;
+        }
+
+        public Patient(string id, string secretId, string email, string phoneNum, string firstName,
+            string lastName, DateTime dateOfBirth, string gender, string nric)
+        {
+            ID = id;
+            SecretId = secretId;
+            Email = email;
+            PhoneNum = phoneNum;
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            Gender = gender;
+            NRIC = nric;
         }
 
         public int Insert(Guid uuid, string password)
@@ -202,6 +218,48 @@ namespace heDenoDB.Entity
                 if (isEmailVerified > 0) isVerified = true;
             }
             return isVerified;
+        }
+
+        public Patient SelectPatientByID(string givenPatientID)
+        {
+            //Customer cust = new Customer("111", "Phoon LK", "Nanyang Polytechnic", "560860", "61234567", "91234567");
+            //return cust;
+
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from web.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter to retrieve data from the database table
+            string sqlstmt = "Select * from patient where id = @paraPatientID";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraPatientID", givenPatientID);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet.
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            Patient obj = null;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                string patientId = row["id"].ToString();
+                string secretId = row["secretId"].ToString();
+                string email = row["email"].ToString();
+                string phoneNum = row["phoneNum"].ToString();
+                string firstName = row["firstName"].ToString();
+                string lastName = row["lastName"].ToString();
+                DateTime dob = DateTime.Parse(row["dob"].ToString());
+                string gender = row["gender"].ToString();
+                string nric = row["NRIC"].ToString();
+
+                obj = new Patient(patientId, secretId, email, phoneNum, firstName, lastName, dob, gender, nric);
+            }
+            return obj;
         }
     }
 }

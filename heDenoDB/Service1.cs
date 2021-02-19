@@ -133,5 +133,47 @@ namespace heDenoDB
             MedicalCertificate medicalCertificate = new MedicalCertificate();
             return medicalCertificate.SelectOneMCById(givenMCId);
         }
+
+        public List<MedicalInstruct> SelectMIById(string givenPatientId)
+        {
+            MedicalInstruct medicalInstruct = new MedicalInstruct();
+            return medicalInstruct.SelectMIById(givenPatientId);
+        }
+
+        public MedicalInstruct SelectOneMIById(string givenMIId)
+        {
+            MedicalInstruct medicalInstruct = new MedicalInstruct();
+            return medicalInstruct.SelectOneMIById(givenMIId);
+        }
+
+        public Doctor SelectDoctorByID(string givenDoctorID)
+        {
+            Doctor doctor = new Doctor();
+            return doctor.SelectDoctorByID(givenDoctorID);
+        }
+
+        public Clinic SelectClinicByID(string clinic_id)
+        {
+            Clinic clinic = new Clinic();
+            return clinic.SelectClinicById(clinic_id);
+        }
+
+        public List<MedicalRecord> SelectMRById(string givenPatientId)
+        {
+            MedicalRecord medicalrecord = new MedicalRecord();
+            return medicalrecord.SelectMRById(givenPatientId);
+        }
+
+        public MedicalRecord SelectOneMRById(string givenMRId)
+        {
+            MedicalRecord medicalrecord = new MedicalRecord();
+            return medicalrecord.SelectOneMRById(givenMRId);
+        }
+        public Patient SelectPatientByID(string givenPatientID)
+        {
+            Patient patient = new Patient();
+            return patient.SelectPatientByID(givenPatientID);
+        }
+
     }
 }

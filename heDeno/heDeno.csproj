@@ -252,6 +252,8 @@
     <Content Include="Properties\DataSources\heDenoDB.Entity.Patient.datasource" />
     <Content Include="Properties\DataSources\heDenoDB.Entity.Specialty.datasource" />
     <Content Include="Properties\DataSources\heDenoDB.Entity.MedicalCertificate.datasource" />
+    <Content Include="Properties\DataSources\heDenoDB.Entity.MedicalInstruct.datasource" />
+    <Content Include="Properties\DataSources\heDenoDB.Entity.MedicalRecord.datasource" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -360,6 +362,10 @@
     <Content Include="Verify.aspx" />
     <Content Include="ViewAppointment.aspx" />
     <Content Include="ViewMC.aspx" />
+    <Content Include="ViewMedicalInstructions.aspx" />
+    <Content Include="ViewMedicalRecords.aspx" />
+    <Content Include="ViewMI.aspx" />
+    <Content Include="ViewMR.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -494,6 +500,34 @@
     </Compile>
     <Compile Include="ViewMC.aspx.designer.cs">
       <DependentUpon>ViewMC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMedicalInstructions.aspx.cs">
+      <DependentUpon>ViewMedicalInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMedicalInstructions.aspx.designer.cs">
+      <DependentUpon>ViewMedicalInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMedicalRecords.aspx.cs">
+      <DependentUpon>ViewMedicalRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMedicalRecords.aspx.designer.cs">
+      <DependentUpon>ViewMedicalRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMI.aspx.cs">
+      <DependentUpon>ViewMI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMI.aspx.designer.cs">
+      <DependentUpon>ViewMI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMR.aspx.cs">
+      <DependentUpon>ViewMR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMR.aspx.designer.cs">
+      <DependentUpon>ViewMR.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

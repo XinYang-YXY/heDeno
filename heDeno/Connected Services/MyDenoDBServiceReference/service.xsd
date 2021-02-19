@@ -313,4 +313,102 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelectMIById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMIByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectMIByIdResult" nillable="true" type="q17:ArrayOfMedicalInstruct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMIById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMIId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMIByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectOneMIByIdResult" nillable="true" type="q18:MedicalInstruct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDoctorByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenDoctorID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDoctorByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectDoctorByIDResult" nillable="true" type="q19:Doctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClinicByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clinic_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClinicByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectClinicByIDResult" nillable="true" type="q20:Clinic" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMRById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMRByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectMRByIdResult" nillable="true" type="q21:ArrayOfMedicalRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMRById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenMRId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectOneMRByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectOneMRByIdResult" nillable="true" type="q22:MedicalRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPatientByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="givenPatientID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPatientByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/heDenoDB.Entity" minOccurs="0" name="SelectPatientByIDResult" nillable="true" type="q23:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -33,6 +33,21 @@ namespace heDenoDB.Entity
             this.doctorFull = doctorFull;
         }
 
+        public Doctor(int id, string email, string phoneNum, string firstName, string lastName, DateTime dob, string gender, string signature, string password, int clientId)
+        {
+            this.id = id;
+            this.email = email;
+            this.phoneNum = phoneNum;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dob = dob;
+            this.gender = gender;
+            this.signature = signature;
+            this.password = password;
+            this.clientId = clientId;
+
+        }
+
         public List<Doctor> SelectByClinic(string clinic_id)
         {
             //Step 1 -  Define a connection to the database by getting
@@ -68,6 +83,49 @@ namespace heDenoDB.Entity
             }
             return doctorList;
         }
-    
+
+        public Doctor SelectDoctorByID(string givenDoctorID)
+        {
+            //Customer cust = new Customer("111", "Phoon LK", "Nanyang Polytechnic", "560860", "61234567", "91234567");
+            //return cust;
+
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from web.config
+            string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
+            MySqlConnection myConn = new MySqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter to retrieve data from the database table
+            string sqlstmt = "Select * from doctor where id = @paraDoctorID";
+            MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraDoctorID", givenDoctorID);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet.
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            Doctor obj = null;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                int doctorId = int.Parse(row["id"].ToString());
+                string email = row["email"].ToString();
+                string phoneNum = row["phoneNum"].ToString();
+                string firstName = row["firstName"].ToString();
+                string lastName = row["lastName"].ToString();
+                DateTime dob = Convert.ToDateTime(row["dob"].ToString());
+                string gender = row["gender"].ToString();
+                string signature = row["signature"].ToString();
+                string password = row["password"].ToString();
+                int clientId = int.Parse(row["clientId"].ToString());
+
+                obj = new Doctor(doctorId, email, phoneNum, firstName, lastName, dob, gender, signature, password, clientId);
+            }
+            return obj;
+        }
+
     }
 }

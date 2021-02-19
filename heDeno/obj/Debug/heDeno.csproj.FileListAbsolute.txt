@@ -1,289 +1,114 @@
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\heDeno.dll.config
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\heDeno.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\heDeno.pdb
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csc.exe
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csc.exe.config
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csc.rsp
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csi.exe
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csi.exe.config
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\csi.rsp
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.AppContext.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Console.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.IO.Compression.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Net.Http.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Net.Sockets.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.ValueTuple.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XPath.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\vbc.exe
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\vbc.exe.config
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\vbc.rsp
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Web.Optimization.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\WebGrease.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Web.Optimization.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.pdb
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
-C:\Users\yxy\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
-C:\Users\yxy\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
-C:\Users\yxy\Desktop\heDeno\heDeno\obj\Debug\heDeno.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\obj\Debug\heDeno.pdb
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\EntityFramework.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\EntityFramework.SqlServer.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\MySql.Data.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\mysql.data.entity.EF6.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\MySqlConnector.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Buffers.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Memory.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Numerics.Vectors.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\EntityFramework.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\EntityFramework.SqlServer.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\MySqlConnector.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Buffers.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Memory.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Numerics.Vectors.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\yxy\Desktop\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\heDeno.dll.config
-C:\Users\livin\Desktop\heDeno\heDeno\bin\heDeno.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\heDeno.pdb
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csc.exe
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csc.exe.config
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csc.rsp
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csi.exe
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csi.exe.config
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\csi.rsp
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.AppContext.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Console.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Globalization.Calendars.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.IO.Compression.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Net.Http.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Net.Sockets.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.ValueTuple.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XPath.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\vbc.exe
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\vbc.exe.config
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\vbc.rsp
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe
-C:\Users\livin\Desktop\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\EntityFramework.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\EntityFramework.SqlServer.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\MySql.Data.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\mysql.data.entity.EF6.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\MySqlConnector.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Buffers.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Memory.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Numerics.Vectors.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Web.Optimization.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\WebGrease.dll
-C:\Users\livin\Desktop\heDeno\heDeno\bin\EntityFramework.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\EntityFramework.SqlServer.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\MySqlConnector.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Buffers.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Memory.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Numerics.Vectors.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\System.Web.Optimization.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Newtonsoft.Json.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Antlr3.Runtime.pdb
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\livin\Desktop\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.dll
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.pdb
-<<<<<<< HEAD
-C:\Git Repos\heDeno\heDeno\bin\EntityFramework.xml
-C:\Git Repos\heDeno\heDeno\bin\heDeno.dll.config
-C:\Git Repos\heDeno\heDeno\bin\heDeno.dll
-C:\Git Repos\heDeno\heDeno\bin\heDeno.pdb
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csc.exe
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csc.exe.config
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csc.rsp
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csi.exe
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csi.exe.config
-C:\Git Repos\heDeno\heDeno\bin\roslyn\csi.rsp
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.Managed.Core.targets
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Git Repos\heDeno\heDeno\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.AppContext.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Collections.Immutable.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Console.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Globalization.Calendars.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.IO.Compression.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Net.Http.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Net.Sockets.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Reflection.Metadata.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.ValueTuple.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Xml.XmlDocument.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Xml.XPath.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Git Repos\heDeno\heDeno\bin\roslyn\vbc.exe
-C:\Git Repos\heDeno\heDeno\bin\roslyn\vbc.exe.config
-C:\Git Repos\heDeno\heDeno\bin\roslyn\vbc.rsp
-C:\Git Repos\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe
-C:\Git Repos\heDeno\heDeno\bin\roslyn\VBCSCompiler.exe.config
-C:\Git Repos\heDeno\heDeno\bin\Antlr3.Runtime.dll
-C:\Git Repos\heDeno\heDeno\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Git Repos\heDeno\heDeno\bin\AspNet.ScriptManager.jQuery.dll
-C:\Git Repos\heDeno\heDeno\bin\EntityFramework.dll
-C:\Git Repos\heDeno\heDeno\bin\EntityFramework.SqlServer.dll
-C:\Git Repos\heDeno\heDeno\bin\heDenoDB.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.Web.Infrastructure.dll
-C:\Git Repos\heDeno\heDeno\bin\MySql.Data.dll
-C:\Git Repos\heDeno\heDeno\bin\mysql.data.entity.EF6.dll
-C:\Git Repos\heDeno\heDeno\bin\MySqlConnector.dll
-C:\Git Repos\heDeno\heDeno\bin\Newtonsoft.Json.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Buffers.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Memory.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Numerics.Vectors.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Optimization.dll
-C:\Git Repos\heDeno\heDeno\bin\WebGrease.dll
-C:\Git Repos\heDeno\heDeno\bin\heDenoDB.pdb
-C:\Git Repos\heDeno\heDeno\bin\heDenoDB.dll.config
-C:\Git Repos\heDeno\heDeno\bin\EntityFramework.SqlServer.xml
-C:\Git Repos\heDeno\heDeno\bin\MySqlConnector.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Buffers.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Memory.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Numerics.Vectors.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Threading.Tasks.Extensions.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Optimization.xml
-C:\Git Repos\heDeno\heDeno\bin\Newtonsoft.Json.xml
-C:\Git Repos\heDeno\heDeno\bin\Antlr3.Runtime.pdb
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Git Repos\heDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Git Repos\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
-C:\Git Repos\heDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
-C:\Git Repos\heDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
-C:\Git Repos\heDeno\heDeno\obj\Debug\heDeno.dll
-C:\Git Repos\heDeno\heDeno\obj\Debug\heDeno.pdb
-C:\Git Repos\heDeno\heDeno\bin\StarkbankEcdsa.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Net.Http.Formatting.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.WebHost.dll
-C:\Git Repos\heDeno\heDeno\bin\System.Net.Http.Formatting.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.xml
-C:\Git Repos\heDeno\heDeno\bin\System.Web.Http.WebHost.xml
-=======
-C:\Users\livin\Desktop\heDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache
->>>>>>> develop
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDeno.dll.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDeno.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDeno.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csc.exe
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csc.exe.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csc.rsp
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csi.exe
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csi.exe.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\csi.rsp
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.Managed.Core.targets
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.AppContext.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Collections.Immutable.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Console.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Globalization.Calendars.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.IO.Compression.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.IO.FileSystem.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Net.Http.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Net.Sockets.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Reflection.Metadata.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.ValueTuple.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Xml.XmlDocument.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Xml.XPath.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\vbc.exe
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\vbc.exe.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\vbc.rsp
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\VBCSCompiler.exe
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\roslyn\VBCSCompiler.exe.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Antlr3.Runtime.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\AspNet.ScriptManager.bootstrap.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\AspNet.ScriptManager.jQuery.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\EntityFramework.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\EntityFramework.SqlServer.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDenoDB.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.ScriptManager.WebForms.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.Web.Infrastructure.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\MySql.Data.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\mysql.data.entity.EF6.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\MySqlConnector.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Newtonsoft.Json.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\QRCoder.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\StarkbankEcdsa.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Buffers.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Memory.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Net.Http.Formatting.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Numerics.Vectors.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Threading.Tasks.Extensions.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Helpers.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Http.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Http.WebHost.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Mvc.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Optimization.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Razor.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.Deployment.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.Razor.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\WebGrease.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDenoDB.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\heDenoDB.dll.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\EntityFramework.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\EntityFramework.SqlServer.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\MySqlConnector.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Newtonsoft.Json.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Buffers.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Memory.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Net.Http.Formatting.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Numerics.Vectors.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Threading.Tasks.Extensions.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Helpers.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Http.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Http.WebHost.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Mvc.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Razor.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.Deployment.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.WebPages.Razor.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\System.Web.Optimization.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Antlr3.Runtime.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.csproj.CoreCompileInputs.cache
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.pdb

@@ -140,6 +140,48 @@ namespace heDeno.MyDenoDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMCById", ReplyAction="http://tempuri.org/IService1/SelectOneMCByIdResponse")]
         System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMIById", ReplyAction="http://tempuri.org/IService1/SelectMIByIdResponse")]
+        heDenoDB.Entity.MedicalInstruct[] SelectMIById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMIById", ReplyAction="http://tempuri.org/IService1/SelectMIByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalInstruct[]> SelectMIByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMIById", ReplyAction="http://tempuri.org/IService1/SelectOneMIByIdResponse")]
+        heDenoDB.Entity.MedicalInstruct SelectOneMIById(string givenMIId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMIById", ReplyAction="http://tempuri.org/IService1/SelectOneMIByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalInstruct> SelectOneMIByIdAsync(string givenMIId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectDoctorByID", ReplyAction="http://tempuri.org/IService1/SelectDoctorByIDResponse")]
+        heDenoDB.Entity.Doctor SelectDoctorByID(string givenDoctorID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectDoctorByID", ReplyAction="http://tempuri.org/IService1/SelectDoctorByIDResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.Doctor> SelectDoctorByIDAsync(string givenDoctorID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectClinicByID", ReplyAction="http://tempuri.org/IService1/SelectClinicByIDResponse")]
+        heDenoDB.Entity.Clinic SelectClinicByID(string clinic_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectClinicByID", ReplyAction="http://tempuri.org/IService1/SelectClinicByIDResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.Clinic> SelectClinicByIDAsync(string clinic_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMRById", ReplyAction="http://tempuri.org/IService1/SelectMRByIdResponse")]
+        heDenoDB.Entity.MedicalRecord[] SelectMRById(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectMRById", ReplyAction="http://tempuri.org/IService1/SelectMRByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalRecord[]> SelectMRByIdAsync(string givenPatientId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMRById", ReplyAction="http://tempuri.org/IService1/SelectOneMRByIdResponse")]
+        heDenoDB.Entity.MedicalRecord SelectOneMRById(string givenMRId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectOneMRById", ReplyAction="http://tempuri.org/IService1/SelectOneMRByIdResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.MedicalRecord> SelectOneMRByIdAsync(string givenMRId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectPatientByID", ReplyAction="http://tempuri.org/IService1/SelectPatientByIDResponse")]
+        heDenoDB.Entity.Patient SelectPatientByID(string givenPatientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectPatientByID", ReplyAction="http://tempuri.org/IService1/SelectPatientByIDResponse")]
+        System.Threading.Tasks.Task<heDenoDB.Entity.Patient> SelectPatientByIDAsync(string givenPatientID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -335,6 +377,62 @@ namespace heDeno.MyDenoDBServiceReference {
         
         public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalCertificate> SelectOneMCByIdAsync(string givenMCId) {
             return base.Channel.SelectOneMCByIdAsync(givenMCId);
+        }
+        
+        public heDenoDB.Entity.MedicalInstruct[] SelectMIById(string givenPatientId) {
+            return base.Channel.SelectMIById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalInstruct[]> SelectMIByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMIByIdAsync(givenPatientId);
+        }
+        
+        public heDenoDB.Entity.MedicalInstruct SelectOneMIById(string givenMIId) {
+            return base.Channel.SelectOneMIById(givenMIId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalInstruct> SelectOneMIByIdAsync(string givenMIId) {
+            return base.Channel.SelectOneMIByIdAsync(givenMIId);
+        }
+        
+        public heDenoDB.Entity.Doctor SelectDoctorByID(string givenDoctorID) {
+            return base.Channel.SelectDoctorByID(givenDoctorID);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Doctor> SelectDoctorByIDAsync(string givenDoctorID) {
+            return base.Channel.SelectDoctorByIDAsync(givenDoctorID);
+        }
+        
+        public heDenoDB.Entity.Clinic SelectClinicByID(string clinic_id) {
+            return base.Channel.SelectClinicByID(clinic_id);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Clinic> SelectClinicByIDAsync(string clinic_id) {
+            return base.Channel.SelectClinicByIDAsync(clinic_id);
+        }
+        
+        public heDenoDB.Entity.MedicalRecord[] SelectMRById(string givenPatientId) {
+            return base.Channel.SelectMRById(givenPatientId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalRecord[]> SelectMRByIdAsync(string givenPatientId) {
+            return base.Channel.SelectMRByIdAsync(givenPatientId);
+        }
+        
+        public heDenoDB.Entity.MedicalRecord SelectOneMRById(string givenMRId) {
+            return base.Channel.SelectOneMRById(givenMRId);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.MedicalRecord> SelectOneMRByIdAsync(string givenMRId) {
+            return base.Channel.SelectOneMRByIdAsync(givenMRId);
+        }
+        
+        public heDenoDB.Entity.Patient SelectPatientByID(string givenPatientID) {
+            return base.Channel.SelectPatientByID(givenPatientID);
+        }
+        
+        public System.Threading.Tasks.Task<heDenoDB.Entity.Patient> SelectPatientByIDAsync(string givenPatientID) {
+            return base.Channel.SelectPatientByIDAsync(givenPatientID);
         }
     }
 }

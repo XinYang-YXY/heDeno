@@ -79,3 +79,29 @@ C:\Git Repos\heDeno\heDenoDB\obj\Debug\heDenoDB.pdb
 =======
 C:\Users\livin\Desktop\heDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
 >>>>>>> develop
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\obj\Debug\heDenoDB.csprojAssemblyReference.cache
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CoreCompileInputs.cache
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\obj\Debug\heDenoDB.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\obj\Debug\heDenoDB.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\heDenoDB.dll.config
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\heDenoDB.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\heDenoDB.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\EntityFramework.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\EntityFramework.SqlServer.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\MySql.Data.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\mysql.data.entity.EF6.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\MySqlConnector.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Buffers.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Memory.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\EntityFramework.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\EntityFramework.SqlServer.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\MySqlConnector.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Buffers.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Memory.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Numerics.Vectors.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\School Programs\Enterprise Development Project\heheheDeno\heDenoDB\obj\Debug\heDenoDB.csproj.CopyComplete

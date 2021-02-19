@@ -75,6 +75,21 @@ namespace heDenoDB
         List<MedicalCertificate> SelectMCById(string givenPatientId);
         [OperationContract]
         MedicalCertificate SelectOneMCById(string givenMCId);
+
+        [OperationContract]
+        List<MedicalInstruct> SelectMIById(string givenPatientId);
+        [OperationContract]
+        MedicalInstruct SelectOneMIById(string givenMIId);
+        [OperationContract]
+        Doctor SelectDoctorByID(string givenDoctorID);
+        [OperationContract]
+        Clinic SelectClinicByID(string clinic_id);
+        [OperationContract]
+        List<MedicalRecord> SelectMRById(string givenPatientId);
+        [OperationContract]
+        MedicalRecord SelectOneMRById(string givenMRId);
+        [OperationContract]
+        Patient SelectPatientByID(string givenPatientID);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

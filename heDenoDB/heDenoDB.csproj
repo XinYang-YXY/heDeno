@@ -81,6 +81,8 @@
     <Compile Include="Entity\Clinic.cs" />
     <Compile Include="Entity\Doctor.cs" />
     <Compile Include="Entity\MedicalCertificate.cs" />
+    <Compile Include="Entity\MedicalInstruct.cs" />
+    <Compile Include="Entity\MedicalRecord.cs" />
     <Compile Include="Entity\Patient.cs" />
     <Compile Include="Entity\Specialty.cs" />
     <Compile Include="IService1.cs" />

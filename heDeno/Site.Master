@@ -56,6 +56,16 @@
                     </li>
                     <% if (Session["user"] != null) { %>
                     <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/ViewMedicalInstructions">
+                            View Medical Instructions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/ViewMedicalRecords">
+                            View Medical Records
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link grey-blue navigation-opacity montserrat" runat="server" href="~/ViewAppointment">
                             View Appointments
                         </a>
