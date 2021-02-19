@@ -27,10 +27,16 @@ namespace heDeno
                 {
                     Guid uuid = Guid.NewGuid();
                     MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                    int result = client.CreatePatient(uuid, tb_email.Text, tb_phoneNum.Text,
-                        tb_firstName.Text, tb_lastName.Text,
-                        DateTime.Parse(tb_dob.Text), (rb_male.Checked) ? "Male" : "Female",
-                        tb_password.Text);
+                    int result = client.CreatePatient(
+                        uuid, 
+                        tb_email.Text, 
+                        tb_phoneNum.Text,
+                        tb_firstName.Text, 
+                        tb_lastName.Text,
+                        DateTime.Parse(tb_dob.Text), 
+                        (rb_male.Checked) ? "Male" : "Female",
+                        tb_password.Text, 
+                        tb_nric.Text.Trim().ToString());
 
                     if (result == 1)
                     {

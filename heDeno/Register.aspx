@@ -13,7 +13,6 @@
             <section class="layout-inputField input-section-gap">
                 <div class="inputHeader-row">
                     <p class="montserrat grey-blue-second medium-font font-size-13">Date of Birth</p>
-                    <p class="montserrat grey-blue-second medium-font font-size-13">Gender</p>
                 </div>
                 <asp:TextBox ID="tb_dob" runat="server" class="standard-inputField" type="date" placeholder="dd/mm/yyyy" required ></asp:TextBox>
                 <div class="rb-container">
@@ -33,6 +32,7 @@
             </section>
             <section class="layout-inputField input-section-gap">
                 <asp:TextBox ID="tb_email" runat="server" class="standard-inputField" placeholder="Email" required></asp:TextBox>
+                <asp:TextBox ID="tb_nric" runat="server" class="standard-inputField" type="text" placeholder="NRIC" required></asp:TextBox>
                 <asp:TextBox ID="tb_password" runat="server" class="standard-inputField" placeholder="Password" required TextMode="Password"></asp:TextBox>
                 <asp:TextBox ID="tb_cfmPassword" runat="server" class="standard-inputField" placeholder="Confirm Password" required TextMode="Password"></asp:TextBox>
             </section>
