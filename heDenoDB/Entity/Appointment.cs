@@ -73,7 +73,7 @@ namespace heDenoDB.Entity
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
             //Step 2 -  Create a DataAdapter to retrieve data from the database table
-            string sqlstmt = "Select * FROM appointment INNER JOIN doctor ON doctor.id = appointment.doctorId INNER JOIN clinic on clinic.id = doctor.clientId WHERE patientId = @paraId";
+            string sqlstmt = "Select * FROM appointment INNER JOIN doctor ON doctor.id = appointment.doctorId INNER JOIN clinic on clinic.id = doctor.clientId WHERE patientId = @paraId AND status >= 1";
             MySqlDataAdapter da = new MySqlDataAdapter(sqlstmt, myConn);
             da.SelectCommand.Parameters.AddWithValue("@paraId", id);
 

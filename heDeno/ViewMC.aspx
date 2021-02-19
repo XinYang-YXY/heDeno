@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section class="vertical-middle-landing">
         <div class="box-style box-desktop-900 item-center">
-            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:35px;">Your Mcs</h2>
+            <h2 class="montserrat grey-blue-second medium-font" style="margin-bottom:35px;">Your MC's</h2>
                    <asp:Repeater ID="mc_repeater" runat="server" OnItemCommand="mc_repeater_ItemCommand">
                        <ItemTemplate>
                            <div class="card" style="background-color:rgba(130, 159, 217, 0.15); margin-top: 10px; margin-bottom: 10px; text-align:left;">
@@ -24,7 +24,7 @@
                         <FooterTemplate>
                             <%if (mc_repeater.Items.Count == 0)  
                                 { %>  
-                                  <p class="montserrat grey-blue-second" style="margin-top:50px;">You have no MCs</p>
+                                  <p class="montserrat grey-blue-second" style="margin-top:50px;">You have no MC's</p>
                               <%} %>  
                         </FooterTemplate>
                   </asp:Repeater>
