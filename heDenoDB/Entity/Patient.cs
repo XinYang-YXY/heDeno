@@ -27,7 +27,7 @@ namespace heDenoDB.Entity
         }
 
         public Patient(string secretId, string email, string phoneNum, string firstName,
-            string lastName, DateTime dateOfBirth, string gender)
+            string lastName, DateTime dateOfBirth, string gender, string nric)
         {
             SecretId = secretId;
             Email = email;
@@ -36,6 +36,7 @@ namespace heDenoDB.Entity
             LastName = lastName;
             DateOfBirth = dateOfBirth;
             Gender = gender;
+            NRIC = nric;
         }
 
         public Patient(string id, string secretId, string email, string phoneNum, string firstName,
@@ -57,8 +58,8 @@ namespace heDenoDB.Entity
             string DBConnect = Environment.GetEnvironmentVariable("MyDenoDB").ToString();
             MySqlConnection myConn = new MySqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO patient (secretId, email, isEmailVerified, phoneNum, firstName, lastName, dob, gender, password) " +
-                "VALUES (@secretId,@email, @isEmailVerified, @phoneNum, @firstName, @lastName,@dob,@gender,@password)";
+            string sqlStmt = "INSERT INTO patient (secretId, email, isEmailVerified, phoneNum, firstName, lastName, dob, gender, password, NRIC) " +
+                "VALUES (@secretId,@email, @isEmailVerified, @phoneNum, @firstName, @lastName,@dob,@gender,@password,@nric)";
             MySqlCommand sqlCmd = new MySqlCommand(sqlStmt, myConn);
 
             sqlCmd.Parameters.AddWithValue("@secretId", uuid);
@@ -70,6 +71,7 @@ namespace heDenoDB.Entity
             sqlCmd.Parameters.AddWithValue("@dob", DateOfBirth.ToString("yyyy-MM-dd"));
             sqlCmd.Parameters.AddWithValue("@gender", Gender);
             sqlCmd.Parameters.AddWithValue("@password", password);
+            sqlCmd.Parameters.AddWithValue("@nric", NRIC);
 
             myConn.Open();
             int result = sqlCmd.ExecuteNonQuery();
@@ -104,8 +106,9 @@ namespace heDenoDB.Entity
                 string lastName = row["lastName"].ToString();
                 DateTime dob = Convert.ToDateTime(row["dob"].ToString());
                 string gender = row["gender"].ToString();
+                string nric = row["NRIC"].ToString();
 
-                patient = new Patient(secretId, dataEmail, phoneNum, firstName, lastName, dob, gender);
+                patient = new Patient(secretId, dataEmail, phoneNum, firstName, lastName, dob, gender, nric);
             }
             return patient;
         }
@@ -135,8 +138,9 @@ namespace heDenoDB.Entity
                 string lastName = row["lastName"].ToString();
                 DateTime dob = Convert.ToDateTime(row["dob"].ToString());
                 string gender = row["gender"].ToString();
+                string nric = row["NRIC"].ToString();
 
-                patient = new Patient(secretId, dataEmail, phoneNum, firstName, lastName, dob, gender);
+                patient = new Patient(secretId, dataEmail, phoneNum, firstName, lastName, dob, gender, nric);
             }
             return patient;
         }

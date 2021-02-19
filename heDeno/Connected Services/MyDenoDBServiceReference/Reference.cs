@@ -88,10 +88,10 @@ namespace heDeno.MyDenoDBServiceReference {
         System.Threading.Tasks.Task<int> CancelAppointmentAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatient", ReplyAction="http://tempuri.org/IService1/CreatePatientResponse")]
-        int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password);
+        int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password, string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatient", ReplyAction="http://tempuri.org/IService1/CreatePatientResponse")]
-        System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password);
+        System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password, string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getPatientByEmail", ReplyAction="http://tempuri.org/IService1/getPatientByEmailResponse")]
         heDenoDB.Entity.Patient getPatientByEmail(string email, string password);
@@ -307,12 +307,12 @@ namespace heDeno.MyDenoDBServiceReference {
             return base.Channel.CancelAppointmentAsync(id);
         }
         
-        public int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password) {
-            return base.Channel.CreatePatient(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password);
+        public int CreatePatient(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password, string nric) {
+            return base.Channel.CreatePatient(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password, nric);
         }
         
-        public System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password) {
-            return base.Channel.CreatePatientAsync(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password);
+        public System.Threading.Tasks.Task<int> CreatePatientAsync(System.Guid uuid, string email, string phoneNum, string firstName, string lastName, System.DateTime dateOfBirth, string gender, string password, string nric) {
+            return base.Channel.CreatePatientAsync(uuid, email, phoneNum, firstName, lastName, dateOfBirth, gender, password, nric);
         }
         
         public heDenoDB.Entity.Patient getPatientByEmail(string email, string password) {

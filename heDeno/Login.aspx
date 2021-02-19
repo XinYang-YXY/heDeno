@@ -17,10 +17,7 @@
                     </div>
                 </div>
                 <asp:Button ID="btn_login" runat="server" Text="Login" class="montserrat rounded-full standard-btn btn-standard-width y-gap" OnClick="btn_login_Click"/>
-                <a class="nav-link grey-blue navigation-opacity montserrat small-text mb-5" runat="server" href="~/">
-                    Forgot your Email or Password?
-                </a>
-                <a class="nav-link grey-blue navigation-opacity montserrat medium-text" runat="server" href="~/Register">
+                <a class="nav-link grey-blue navigation-opacity montserrat medium-text mt-5" runat="server" href="~/Register">
                     Register an account
                 </a>
             </section>

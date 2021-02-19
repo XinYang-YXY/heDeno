@@ -81,9 +81,9 @@ namespace heDenoDB
         }
 
         public int CreatePatient(Guid uuid, string email, string phoneNum, string firstName,
-            string lastName, DateTime dateOfBirth, string gender, string password)
+            string lastName, DateTime dateOfBirth, string gender, string password, string nric)
         {
-            Patient patient = new Patient(null, email, phoneNum, firstName, lastName, dateOfBirth, gender);
+            Patient patient = new Patient(null, email, phoneNum, firstName, lastName, dateOfBirth, gender, nric);
             return patient.Insert(uuid, password);
         }
 

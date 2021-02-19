@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1de1afb6-8eb9-444f-a6af-477c05ef8bad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="70e8d7ae-a0eb-4a44-9902-71ce50005c55" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="aa631747-ff62-45df-8170-690a77f2c6ea" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ec9c96d1-34a9-4f7b-bc4d-8ae46e634d65" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="35e17f0e-2e26-43ff-80f6-92a89d7f0d2f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
-    <MetadataFile FileName="heDenoDB.xsd" MetadataType="Schema" ID="c37fe5e0-dfc4-47b7-b9fe-0ff7dff50a15" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
-    <MetadataFile FileName="heDenoDB.Entity.xsd" MetadataType="Schema" ID="8272e3a5-2126-407b-907f-eea5da97bc29" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="90273c3e-fae2-4c7f-a15a-ee73ef2d6e13" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9326f922-c310-44d9-a327-ec5c80ecba66" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="93fe447b-8839-487f-9e43-b86ea0847d86" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
+    <MetadataFile FileName="heDenoDB.xsd" MetadataType="Schema" ID="6a847af4-b572-4371-b999-4f2453759dec" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
+    <MetadataFile FileName="heDenoDB.Entity.xsd" MetadataType="Schema" ID="0c078d41-4008-4686-a457-ea85ea23e700" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/heDenoDB/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -51,7 +51,7 @@ namespace heDenoDB
         // Patient operation contract
         [OperationContract]
         int CreatePatient(Guid uuid, string email, string phoneNum, string firstName,
-            string lastName, DateTime dateOfBirth, string gender, string password);
+            string lastName, DateTime dateOfBirth, string gender, string password, string nric);
 
         [OperationContract]
         Patient getPatientByEmail(string email, string password);
