@@ -596,7 +596,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50198</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50198/</IISUrl>
+          <IISUrl>http://localhost:50198</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

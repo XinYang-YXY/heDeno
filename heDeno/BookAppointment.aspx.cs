@@ -15,6 +15,9 @@ namespace heDeno
 {
     public partial class BookAppointment : System.Web.UI.Page
     {
+        protected string specialty;
+        protected string clinic;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
@@ -27,26 +30,75 @@ namespace heDeno
                 {
                     select_date.Attributes["min"] = DateTime.Today.AddDays(5).ToString("yyyy-MM-dd");
 
+                    specialty = Request.QueryString["specialty"];
+                    clinic = Request.QueryString["clinic"];
+
                     if (!IsPostBack)
                     {
                         try
                         {
-                            List<Specialty> specialtyList = new List<Specialty>();
-                            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-                            specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+                            // code here to receive url parameters
+                            if (!(String.IsNullOrEmpty(specialty) && String.IsNullOrEmpty(clinic)))
+                            {
+                                System.Diagnostics.Debug.WriteLine("case 1");
 
-                            select_specialty.DataSource = specialtyList;
-                            select_specialty.DataTextField = "specialtyFull";
-                            select_specialty.DataValueField = "specialtyName";
-                            select_specialty.DataBind();
+                                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
 
-                            select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
-                            select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
-                            select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
-                            select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
-                            select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
-                            select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
-                            available_timeslots.Items.Clear();
+                                List<Specialty> specialtyList = new List<Specialty>();
+                                List<Clinic> clinicList = new List<Clinic>();
+                                List<Doctor> doctorList = new List<Doctor>();
+
+                                specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+                                clinicList = client.GetClinicBySpecialty(specialty).ToList<Clinic>();
+                                doctorList = client.GetDoctorByClinic(clinic).ToList<Doctor>();
+
+                                select_specialty.DataSource = specialtyList;
+                                select_specialty.DataTextField = "specialtyFull";
+                                select_specialty.DataValueField = "specialtyName";
+                                select_specialty.DataBind();
+                                select_clinic.DataSource = clinicList;
+                                select_clinic.DataTextField = "clinicName";
+                                select_clinic.DataValueField = "id";
+                                select_clinic.DataBind();
+                                select_doctor.DataSource = doctorList;
+                                select_doctor.DataTextField = "doctorFull";
+                                select_doctor.DataValueField = "id";
+                                select_doctor.DataBind();
+
+                                select_specialty.SelectedValue = specialty;
+                                select_clinic.SelectedValue = clinic;
+
+                                select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
+                                select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
+                                select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
+                                select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
+
+
+                                available_timeslots.Items.Clear();
+                                select_date.Text = "";
+
+                            }
+                            else
+                            {
+                                System.Diagnostics.Debug.WriteLine("case 2");
+
+                                List<Specialty> specialtyList = new List<Specialty>();
+                                MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                                specialtyList = client.GetAllSpecialty().ToList<Specialty>();
+
+                                select_specialty.DataSource = specialtyList;
+                                select_specialty.DataTextField = "specialtyFull";
+                                select_specialty.DataValueField = "specialtyName";
+                                select_specialty.DataBind();
+
+                                select_specialty.Items.Insert(0, new ListItem("-- Select Specialty --", ""));
+                                select_specialty.Items.FindByText("-- Select Specialty --").Attributes.Add("disabled", "disabled");
+                                select_clinic.Items.Insert(0, new ListItem("-- Select Clinic --", ""));
+                                select_clinic.Items.FindByText("-- Select Clinic --").Attributes.Add("disabled", "disabled");
+                                select_doctor.Items.Insert(0, new ListItem("-- Select Preferred Doctor --", ""));
+                                select_doctor.Items.FindByText("-- Select Preferred Doctor --").Attributes.Add("disabled", "disabled");
+                                available_timeslots.Items.Clear();
+                            }
                         }
                         catch (Exception ex)
                         {
