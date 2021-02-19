@@ -112,3 +112,4 @@ D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\he
 D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.csproj.CopyComplete
 D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.dll
 D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.pdb
+D:\School Programs\Enterprise Development Project\heheheDeno\heDeno\obj\Debug\heDeno.csprojAssemblyReference.cache

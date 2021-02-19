@@ -13,31 +13,46 @@ namespace heDeno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
-            List<MedicalInstruct> MIList = client.SelectMIById(Session["id"].ToString()).ToList<MedicalInstruct>();
-            for (int i = 0; i < MIList.Count; i++)
+
+            if (Session["user"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
             {
-                Doctor doctor = client.SelectDoctorByID(MIList[i].DoctorId);
-                Clinic clinic = client.SelectClinicByID(doctor.clientId.ToString());
-                Literal record = new Literal();
-
-                var div = new HtmlGenericControl("div");
-                div.Attributes["class"] = "layout-records";
-
-
-                var button = new Button
+                if (!Session["AuthToken"].ToString().Equals(Request.Cookies["AuthToken"].Value))
                 {
-                    ID = MIList[i].Id,
-                    Text = "View instruction",
-                    CssClass = "montserrat rounded-full standard-btn btn-standard-width y-gap record-btn"
-                };
-                button.Command += ViewBtnClick;
+                    Response.Redirect("/Login", false);
+                }
+                else
+                {
+                    MyDenoDBServiceReference.Service1Client client = new MyDenoDBServiceReference.Service1Client();
+                    List<MedicalInstruct> MIList = client.SelectMIById(Session["id"].ToString()).ToList<MedicalInstruct>();
+                    for (int i = 0; i < MIList.Count; i++)
+                    {
+                        Doctor doctor = client.SelectDoctorByID(MIList[i].DoctorId);
+                        Clinic clinic = client.SelectClinicByID(doctor.clientId.ToString());
+                        Literal record = new Literal();
 
-                record.Text = $"<span class='record-titles IDTitle'>Medical Instruction ID:</span> <span class='records ID'>{MIList[i].Id}</span> <span class='record-titles NRICTitle'>Date:</span> <span class='records NRIC'>{MIList[i].Date.ToString("dd/MM/yy")}</span> <span class='record-titles NameTitle'>Doctor Name:</span> <span class='records Name' >{doctor.firstName + " " + doctor.lastName}</span> <span class='record-titles'>Clinic Name:</span> <span class='records' >{clinic.ClinicName}</span>";
+                        var div = new HtmlGenericControl("div");
+                        div.Attributes["class"] = "layout-records";
 
-                div.Controls.Add(record);
-                div.Controls.Add(button);
-                allMIs.Controls.Add(div);
+
+                        var button = new Button
+                        {
+                            ID = MIList[i].Id,
+                            Text = "View instruction",
+                            CssClass = "montserrat rounded-full standard-btn btn-standard-width y-gap record-btn"
+                        };
+                        button.Command += ViewBtnClick;
+
+                        record.Text = $"<span class='record-titles IDTitle'>Medical Instruction ID:</span> <span class='records ID'>{MIList[i].Id}</span> <span class='record-titles NRICTitle'>Date:</span> <span class='records NRIC'>{MIList[i].Date.ToString("dd/MM/yy")}</span> <span class='record-titles NameTitle'>Doctor Name:</span> <span class='records Name' >{doctor.firstName + " " + doctor.lastName}</span> <span class='record-titles'>Clinic Name:</span> <span class='records' >{clinic.ClinicName}</span>";
+
+                        div.Controls.Add(record);
+                        div.Controls.Add(button);
+                        allMIs.Controls.Add(div);
+                    }
+                }
+            }
+            else
+            {
+                Response.Redirect("/Login", false);
             }
 
         }
